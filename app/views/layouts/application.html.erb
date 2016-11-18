@@ -8,7 +8,7 @@
     <meta name="author" content="Minqi Pan">
     <link rel="icon" href="/favicon.ico">
 
-    <title><%= '[DEV] ' if Rails.env.development? %>Enclose.IO</title>
+    <title><%= '[DEV] ' if Rails.env.development? %><%= "#{@subtitle} - " if @subtitle %>Enclose.IO</title>
 
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -17,7 +17,8 @@
 
   <body>
     <div class="container">
-      <div class="header clearfix">
+      <% unless @no_header %>
+        <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills float-xs-right">
             <li class="nav-item">
@@ -50,6 +51,7 @@
         </nav>
         <h3 class="text-muted"><a href="/" class="logo"><%= image_tag 'logo.png', alt: 'Enclose.IO', height: 34 %></a></h3>
       </div>
+      <% end %>
 
       <% if notice.present? %>
         <div class="alert alert-success alert-global" role="alert">

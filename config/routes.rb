@@ -1,6 +1,7 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  root 'libmemfs#index', constraints: { subdomain: 'libmemfs' }
   root 'projects#index'
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth' }
   resources :projects do
