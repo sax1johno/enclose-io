@@ -98,7 +98,7 @@ then we could execute commands similar to the following to get started.
     # Add C:\Program Files\7-Zip to PATH
 
     # Install Perl
-    # -> https://www.perl.org/
+    # -> http://www.activestate.com/ActivePerl
 
     # Install bison, sed from GnuWin32
     # -> http://gnuwin32.sourceforge.net/
