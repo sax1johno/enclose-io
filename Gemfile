@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.3.1'
-
-gem 'enclose-io-compiler', '0.6.0'
+ruby '2.3.3'
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'node-compiler', '0.7.0'
 gem 'pg', '~> 0.19.0'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
@@ -40,3 +39,4 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'certified', platforms: [:mingw, :mswin, :x64_mingw]
+
