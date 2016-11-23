@@ -97,6 +97,12 @@ then we could execute commands similar to the following to get started.
     # -> http://www.7-zip.org/a/7z1604-x64.msi
     # Add C:\Program Files\7-Zip to PATH
 
+    # Install Perl
+    # -> https://www.perl.org/
+
+    # Install bison, sed from GnuWin32
+    # -> http://gnuwin32.sourceforge.net/
+
     # Run the worker
     git clone https://github.com/enclose-io/enclose-io.git
     cd enclose-io
