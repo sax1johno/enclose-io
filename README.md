@@ -107,6 +107,14 @@ then we could execute commands similar to the following to get started.
     set ENCLOSE_VCBUILD_ARGS=nosign
     bundle exec sidekiq --concurrency 1 --queue=win64
     
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/enclose-io/enclose-io.
+
+## Contributors
+
+* [pmq20](https://github.com/pmq20) - **Minqi Pan** &lt;pmq2001@gmail.com&gt;
+
 ## License
 
 Enclose.IO is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
