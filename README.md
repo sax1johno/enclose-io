@@ -11,6 +11,10 @@ http://enclose.io/
 [![Code Climate](https://codeclimate.com/github/enclose-io/enclose-io/badges/gpa.svg)](https://codeclimate.com/github/enclose-io/enclose-io)
 [![codecov.io](https://codecov.io/github/enclose-io/enclose-io/coverage.svg?branch=master)](https://codecov.io/github/enclose-io/enclose-io?branch=master)
 
+## Current cutting-edges and the future work
+
+https://speakerdeck.com/pmq20/enclose-dot-io-current-cutting-edges-and-the-future-work
+
 ## Installation
 
 ### Linux (x86_64)
