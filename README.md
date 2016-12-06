@@ -127,4 +127,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/enclos
 
 ## License
 
-Enclose.IO is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+Copyright (c) 2016 Enclose.IO contributors, under terms of the [MIT License](http://opensource.org/licenses/MIT).
