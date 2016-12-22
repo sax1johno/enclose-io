@@ -6,6 +6,6 @@
 class RubycController < ApplicationController
   def index
     @no_header = true
-    @subtitle = 'Node Compiler'
+    @subtitle = 'Ruby Compiler'
   end
 end
