@@ -8,8 +8,9 @@ making your project ready to be used out-of-the-box.
 http://enclose.io/
 
 [![Build Status](https://travis-ci.org/pmq20/enclose-io.svg?branch=master)](https://travis-ci.org/pmq20/enclose-io)
-[![Code Climate](https://codeclimate.com/github/pmq20/pmq20/badges/gpa.svg)](https://codeclimate.com/github/pmq20/enclose-io)
-[![codecov.io](https://codecov.io/github/pmq20/pmq20/coverage.svg?branch=master)](https://codecov.io/github/pmq20/enclose-io?branch=master)
+[![Code Climate](https://codeclimate.com/github/pmq20/enclose-io/badges/gpa.svg)](https://codeclimate.com/github/pmq20/enclose-io)
+[![Test Coverage](https://codeclimate.com/github/pmq20/enclose-io/badges/coverage.svg)](https://codeclimate.com/github/pmq20/enclose-io/coverage)
+[![Issue Count](https://codeclimate.com/github/pmq20/enclose-io/badges/issue_count.svg)](https://codeclimate.com/github/pmq20/enclose-io)
 
 ## Current cutting-edges and the future work
 
