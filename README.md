@@ -7,9 +7,9 @@ making your project ready to be used out-of-the-box.
 
 http://enclose.io/
 
-[![Build Status](https://travis-ci.org/enclose-io/enclose-io.svg?branch=master)](https://travis-ci.org/enclose-io/enclose-io)
-[![Code Climate](https://codeclimate.com/github/enclose-io/enclose-io/badges/gpa.svg)](https://codeclimate.com/github/enclose-io/enclose-io)
-[![codecov.io](https://codecov.io/github/enclose-io/enclose-io/coverage.svg?branch=master)](https://codecov.io/github/enclose-io/enclose-io?branch=master)
+[![Build Status](https://travis-ci.org/pmq20/enclose-io.svg?branch=master)](https://travis-ci.org/pmq20/enclose-io)
+[![Code Climate](https://codeclimate.com/github/pmq20/pmq20/badges/gpa.svg)](https://codeclimate.com/github/pmq20/enclose-io)
+[![codecov.io](https://codecov.io/github/pmq20/pmq20/coverage.svg?branch=master)](https://codecov.io/github/pmq20/enclose-io?branch=master)
 
 ## Current cutting-edges and the future work
 
@@ -46,7 +46,7 @@ then we could execute commands similar to the following to get started.
     heroku login
 
     # Run the worker
-    git clone git@github.com:enclose-io/enclose-io.git
+    git clone git@github.com:pmq20/enclose-io.git
     cd enclose-io
     git remote add heroku https://git.heroku.com/pure-brushlands-17482.git
     bundle install
@@ -72,7 +72,7 @@ then we could execute commands similar to the following to get started.
     heroku login
     
     # Run the worker
-    git clone git@github.com:enclose-io/enclose-io.git
+    git clone git@github.com:pmq20/enclose-io.git
     cd enclose-io
     git remote add heroku https://git.heroku.com/pure-brushlands-17482.git
     bundle install
@@ -108,7 +108,7 @@ then we could execute commands similar to the following to get started.
     # -> http://gnuwin32.sourceforge.net/
 
     # Run the worker
-    git clone https://github.com/enclose-io/enclose-io.git
+    git clone https://github.com/pmq20/enclose-io.git
     cd enclose-io
     git remote add heroku https://git.heroku.com/pure-brushlands-17482.git
     bundle install
@@ -119,12 +119,8 @@ then we could execute commands similar to the following to get started.
     
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/enclose-io/enclose-io.
-
-## Contributors
-
-* [pmq20](https://github.com/pmq20) - **Minqi Pan** &lt;pmq2001@gmail.com&gt;
+Bug reports and pull requests are welcome on GitHub at https://github.com/pmq20/enclose-io.
 
 ## License
 
-Copyright (c) 2016-2017 Enclose.IO contributors, under terms of the [MIT License](http://opensource.org/licenses/MIT).
+Copyright (c) 2016-2017 Minqi Pan, under terms of the [MIT License](http://opensource.org/licenses/MIT).
