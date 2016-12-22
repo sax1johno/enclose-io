@@ -3,9 +3,9 @@
 # This file is part of Enclose.IO, distributed under the MIT License
 # For full terms see the included LICENSE file
 
-class NodecController < ApplicationController
+class LibsquashController < ApplicationController
   def index
     @no_header = true
-    @subtitle = 'Node Compiler'
+    @subtitle = 'Libsquash'
   end
 end

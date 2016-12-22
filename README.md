@@ -2,8 +2,8 @@
 
 Enclose.IO 
 is a cloud-based service that creates a single executable out of your node.js application
-for Windows, Linux and Mac OS X. It freezes your app code with the Node.js interpreter and all module dependencies,
-making your app ready to be used out-of-the-box.
+for Windows, Linux and Mac OS X. It freezes your project code with the Node.js interpreter and all module dependencies,
+making your project ready to be used out-of-the-box.
 
 http://enclose.io/
 
@@ -127,4 +127,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/enclos
 
 ## License
 
-Copyright (c) 2016 Enclose.IO contributors, under terms of the [MIT License](http://opensource.org/licenses/MIT).
+Copyright (c) 2016-2017 Enclose.IO contributors, under terms of the [MIT License](http://opensource.org/licenses/MIT).
