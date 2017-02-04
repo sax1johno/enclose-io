@@ -121,7 +121,3 @@ then we could execute commands similar to the following to get started.
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/pmq20/enclose-io.
-
-## License
-
-Copyright (c) 2017 **Minqi Pan** &lt;pmq2001@gmail.com&gt;, under terms of the [MIT License](http://opensource.org/licenses/MIT).
