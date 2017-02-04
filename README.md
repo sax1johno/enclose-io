@@ -117,7 +117,3 @@ then we could execute commands similar to the following to get started.
     FOR /F "delims==" %i IN ('heroku config --shell') DO call set %i=%%i:'=%
     set ENCLOSE_VCBUILD_ARGS=nosign
     bundle exec sidekiq --concurrency 1 --queue=win64
-    
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/pmq20/enclose-io.
