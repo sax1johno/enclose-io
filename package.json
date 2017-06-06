@@ -2,6 +2,7 @@
   "name": "enclose_io",
   "private": true,
   "dependencies": {
+    "antd": "^2.10.4",
     "autoprefixer": "^7.1.1",
     "babel-core": "^6.24.1",
     "babel-loader": "7.x",
