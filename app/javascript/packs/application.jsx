@@ -12,15 +12,9 @@ import 'antd/dist/antd.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import enUS from 'antd/lib/locale-provider/en_US';
-import { Layout, Menu, LocaleProvider, Button, Radio, Icon, Input } from 'antd';
+import { Layout, Menu, LocaleProvider, Button, Radio, Icon, Input, Breadcrumb } from 'antd';
 const { Header, Content, Footer, Sider } = Layout;
 const Search = Input.Search;
-const App = () => (
-  <div>
-    <p>
-    </p>
-  </div>
-);
 
 ReactDOM.render(
 <LocaleProvider locale={enUS}>
@@ -28,7 +22,7 @@ ReactDOM.render(
   <Sider style={{ overflow: 'auto', paddingBottom: '48px' }}>
     <div className="logo"><a href="/">Enclose.IO</a></div>
     <div className="searchprj">
-      <Search placeholder="Search..."/>
+      <Search placeholder="Search Projects..."/>
     </div>
     <Menu theme="dark" mode="inline" defaultSelectedKeys={['0']}>
       <Menu.Item key="0">
@@ -59,10 +53,5 @@ ReactDOM.render(
       </a>
     </div>
   </Sider>
-  <Layout>
-    <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
-      <App />
-    </Content>
-  </Layout>
 </Layout>
 </LocaleProvider>, document.getElementById('root'));
