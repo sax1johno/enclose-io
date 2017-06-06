@@ -14,18 +14,37 @@
  *= require_self
  */
 
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#sidebar {
+  position: fixed;
+  left: 0;
+  width: 200px;
+  z-index: 30000;
+}
+
+#main {
+  margin-left: 200px;
+}
+
 .logo a {
   display: block;
-  color: rgba(255, 255, 255, 0.67);
-  background: transparent image-url("enclose.png") no-repeat scroll 8px 0;
+  color: rgba(255, 255, 255, 0.8);
+  background: transparent image-url("enclose.png") no-repeat scroll 6px 0;
   background-size: 40px;
   line-height: 44px;
   height: 40px;
-  text-indent: 62px;
+  text-indent: 60px;
   font-size: 16px;
   font-family: Raleway, Hiragino Sans GB, sans-serif;
   margin: 16px;
   text-decoration: none !important;
+  &:hover {
+    color: white;
+  }
 }
 
 .searchprj {
@@ -41,7 +60,7 @@
     outline: none !important;
     box-shadow: none !important;
     border-radius: 0;
-    background: black;
+    background: transparent;
   }
 }
 

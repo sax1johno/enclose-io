@@ -11,8 +11,11 @@ import 'antd/dist/antd.less';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import { Layout, Menu, Button, Radio, Icon, Input, Breadcrumb } from 'antd';
+import { LocaleProvider } from 'antd';
 import enUS from 'antd/lib/locale-provider/en_US';
-import { Layout, Menu, LocaleProvider, Button, Radio, Icon, Input, Breadcrumb } from 'antd';
+
 const { Header, Content, Footer, Sider } = Layout;
 const Search = Input.Search;
 
@@ -26,7 +29,7 @@ ReactDOM.render(
     </div>
     <Menu theme="dark" mode="inline" defaultSelectedKeys={['0']}>
       <Menu.Item key="0">
-        <span className="nav-text">Enclose.IO</span>
+        <span className="nav-text">Home</span>
       </Menu.Item>
       <Menu.Item>
         <span className="nav-text">Node.js Compiler</span>
@@ -66,4 +69,4 @@ ReactDOM.render(
     </div>
   </Sider>
 </Layout>
-</LocaleProvider>, document.getElementById('root'));
+</LocaleProvider>, document.getElementById('sidebar'));

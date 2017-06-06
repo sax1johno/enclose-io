@@ -1549,6 +1549,12 @@ decimal.js@7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/decimal.js/-/decimal.js-7.1.1.tgz#1adcad7d70d7a91c426d756f1eb6566c3be6cbcf"
 
+deep-eql@~2.0.1:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/deep-eql/-/deep-eql-2.0.2.tgz#b1bac06e56f0a76777686d50c9feb75c2ed7679a"
+  dependencies:
+    type-detect "^3.0.0"
+
 deep-extend@~0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.4.2.tgz#48b699c27e334bf89f10892be432f6e4c7d34a7f"
@@ -1686,6 +1692,10 @@ enhanced-resolve@^3.0.0:
 enquire.js@^2.1.6:
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/enquire.js/-/enquire.js-2.1.6.tgz#3e8780c9b8b835084c3f60e166dbc3c2a3c89814"
+
+enquire@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/enquire/-/enquire-0.0.2.tgz#e92389cd80224971700e4fc8bac8129c75bf8661"
 
 errno@^0.1.1, errno@^0.1.3:
   version "0.1.4"
@@ -3277,6 +3287,10 @@ performance-now@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
 
+performance-now@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
+
 pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
@@ -3788,7 +3802,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@15.x, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.5.9, prop-types@~15.5.7:
+prop-types@15.x, prop-types@^15.5.0, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.5.9, prop-types@~15.5.7:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
@@ -3859,6 +3873,12 @@ querystringify@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-1.0.0.tgz#6286242112c5b712fa654e526652bf6a13ff05cb"
 
+raf@3.x, raf@~3.3.0:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/raf/-/raf-3.3.2.tgz#0c13be0b5b49b46f76d6669248d527cf2b02fe27"
+  dependencies:
+    performance-now "^2.1.0"
+
 rails-erb-loader@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/rails-erb-loader/-/rails-erb-loader-5.0.1.tgz#d044251851e38259f971105e66b8f43ef3488897"
@@ -3897,6 +3917,15 @@ rc-animate@2.x, rc-animate@^2.0.2, rc-animate@^2.3.0, rc-animate@~2.3.0:
   dependencies:
     css-animation "^1.3.0"
     prop-types "^15.5.6"
+
+rc-banner-anim@^0.5.12:
+  version "0.5.12"
+  resolved "https://registry.yarnpkg.com/rc-banner-anim/-/rc-banner-anim-0.5.12.tgz#e85d10f8fe87f89223ed85092a4f1f8647715973"
+  dependencies:
+    babel-runtime "6.x"
+    rc-tween-one "~1.1.0"
+    style-utils "~0.1.10"
+    tween-functions "1.x"
 
 rc-calendar@~8.4.0:
   version "8.4.0"
@@ -4045,12 +4074,30 @@ rc-progress@~2.1.0:
     babel-runtime "^6.23.0"
     prop-types "^15.5.8"
 
+rc-queue-anim@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/rc-queue-anim/-/rc-queue-anim-1.0.4.tgz#e00863a4ffb7dc7a4c9d7c1e4d65a3041c581ab5"
+  dependencies:
+    babel-runtime "6.x"
+    prop-types "^15.5.0"
+    rc-tween-one "~1.2.4"
+
 rc-rate@~2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/rc-rate/-/rc-rate-2.1.1.tgz#88aeda8b3d6470bbae4f6518c652a02a959bddc5"
   dependencies:
     classnames "^2.2.5"
     prop-types "^15.5.8"
+
+rc-scroll-anim@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/rc-scroll-anim/-/rc-scroll-anim-1.0.5.tgz#f6b062f117bebffb3f91b6ac1e17678fcca3e566"
+  dependencies:
+    babel-runtime "6.x"
+    prop-types "^15.5.10"
+    raf "3.x"
+    rc-tween-one "~1.2.5"
+    tween-functions "1.x"
 
 rc-select@~6.8.0:
   version "6.8.6"
@@ -4176,6 +4223,27 @@ rc-trigger@1.x:
     rc-animate "2.x"
     rc-util "4.x"
 
+rc-tween-one@^1.2.5, rc-tween-one@~1.2.4, rc-tween-one@~1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/rc-tween-one/-/rc-tween-one-1.2.5.tgz#0795b840c4cfb19f285c638b091b104cb16cb633"
+  dependencies:
+    babel-runtime "6.x"
+    deep-eql "~2.0.1"
+    prop-types "^15.5.0"
+    raf "~3.3.0"
+    style-utils "~0.1.13"
+    tween-functions "~1.2.0"
+
+rc-tween-one@~1.1.0:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/rc-tween-one/-/rc-tween-one-1.1.5.tgz#655a4ca87c7d69fa1dbc30d4c533f5bd749a0842"
+  dependencies:
+    babel-runtime "6.x"
+    deep-eql "~2.0.1"
+    raf "~3.3.0"
+    style-utils "~0.1.13"
+    tween-functions "~1.2.0"
+
 rc-upload@~2.3.0:
   version "2.3.7"
   resolved "https://registry.yarnpkg.com/rc-upload/-/rc-upload-2.3.7.tgz#9f49e8e8a15919149ff71174ede8b50187ce2e63"
@@ -4231,6 +4299,13 @@ react-slick@~0.14.2:
     json2mq "^0.2.0"
     object-assign "^4.1.0"
     slick-carousel "^1.6.0"
+
+react-sublime-video@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/react-sublime-video/-/react-sublime-video-0.2.5.tgz#c967b8e9a374b36d6a5d1b63b93fa6ec02e54842"
+  dependencies:
+    prop-types "^15.5.10"
+    rc-tween-one "^1.2.5"
 
 react@^15.5.4:
   version "15.5.4"
@@ -4841,6 +4916,10 @@ style-loader@^0.18.2:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
 
+style-utils@~0.1.10, style-utils@~0.1.13:
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/style-utils/-/style-utils-0.1.13.tgz#9df5c750daa41865f2238fd16f6e12b93a0a26a0"
+
 sugarss@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/sugarss/-/sugarss-1.0.0.tgz#65e51b3958432fb70d5451a68bb33e32d0cf1ef7"
@@ -4940,9 +5019,17 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
+tween-functions@1.x, tween-functions@~1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/tween-functions/-/tween-functions-1.2.0.tgz#1ae3a50e7c60bb3def774eac707acbca73bbc3ff"
+
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
+
+type-detect@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/type-detect/-/type-detect-3.0.0.tgz#46d0cc8553abb7b13a352b0d6dea2fd58f2d9b55"
 
 type-is@~1.6.15:
   version "1.6.15"
