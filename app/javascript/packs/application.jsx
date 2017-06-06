@@ -8,14 +8,57 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import 'antd/dist/antd.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import { DatePicker } from 'antd';
+import enUS from 'antd/lib/locale-provider/en_US';
+import { Layout, Menu, LocaleProvider, Button, Radio, Icon } from 'antd';
+const { Header, Content, Footer, Sider } = Layout;
 
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <DatePicker />,
-    document.body.appendChild(document.createElement('div')),
-  );
-});
+const App = () => (
+  <div>
+    <p>
+      todo
+    </p>  
+  </div>
+);
+
+ReactDOM.render(
+<LocaleProvider locale={enUS}>
+  <Layout style={{ height: '100vh' }}>
+  <Sider style={{ overflow: 'auto' }}>
+    <div className="logo"><a href="/">Enclose.IO</a></div>
+    <Menu theme="dark" mode="inline" defaultSelectedKeys={['0']}>
+      <Menu.Item key="0">
+        <span className="nav-text">Enclose.IO</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span className="nav-text">Node.js Compiler</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span className="nav-text">Ruby Compiler</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span className="nav-text">Ruby</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span className="nav-text">Fengdie</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span className="nav-text">Yarn</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span className="nav-text">Homeland</span>
+      </Menu.Item>
+    </Menu>
+    <div className="ant-layout-sider-trigger addprj">
+      <Button ghost icon="folder-add">Add Project</Button>
+    </div>
+  </Sider>
+  <Layout>
+    <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
+      <App />
+    </Content>
+  </Layout>
+</Layout>
+</LocaleProvider>, document.getElementById('root'));
