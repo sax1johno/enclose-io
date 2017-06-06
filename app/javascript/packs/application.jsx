@@ -28,10 +28,7 @@ ReactDOM.render(
   <Sider style={{ overflow: 'auto', paddingBottom: '48px' }}>
     <div className="logo"><a href="/">Enclose.IO</a></div>
     <div className="searchprj">
-      <Search
-        placeholder="Search..."
-        onSearch={value => console.log(value)}
-      />
+      <Search placeholder="Search..."/>
     </div>
     <Menu theme="dark" mode="inline" defaultSelectedKeys={['0']}>
       <Menu.Item key="0">
