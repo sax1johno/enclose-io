@@ -7,7 +7,7 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.less';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -38,10 +38,22 @@ ReactDOM.render(
         <span className="nav-text">Ruby</span>
       </Menu.Item>
       <Menu.Item>
-        <span className="nav-text">Fengdie</span>
+        <span className="nav-text">Npm</span>
       </Menu.Item>
       <Menu.Item>
         <span className="nav-text">Yarn</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span className="nav-text">Fengdie</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span className="nav-text">Dora</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span className="nav-text">Homebrew</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span className="nav-text">CocoaPods</span>
       </Menu.Item>
       <Menu.Item>
         <span className="nav-text">Homeland</span>
@@ -49,7 +61,7 @@ ReactDOM.render(
     </Menu>
     <div className="ant-layout-sider-trigger addprj">
       <a href="https://github.com/pmq20/enclose-io/issues/new">
-        <Button ghost icon="folder-add">Add Project</Button>
+        <Button ghost icon="plus">Add Project</Button>
       </a>
     </div>
   </Sider>
