@@ -12,22 +12,27 @@ import 'antd/dist/antd.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import enUS from 'antd/lib/locale-provider/en_US';
-import { Layout, Menu, LocaleProvider, Button, Radio, Icon } from 'antd';
+import { Layout, Menu, LocaleProvider, Button, Radio, Icon, Input } from 'antd';
 const { Header, Content, Footer, Sider } = Layout;
-
+const Search = Input.Search;
 const App = () => (
   <div>
     <p>
-      todo
-    </p>  
+    </p>
   </div>
 );
 
 ReactDOM.render(
 <LocaleProvider locale={enUS}>
   <Layout style={{ height: '100vh' }}>
-  <Sider style={{ overflow: 'auto' }}>
+  <Sider style={{ overflow: 'auto', paddingBottom: '48px' }}>
     <div className="logo"><a href="/">Enclose.IO</a></div>
+    <div className="searchprj">
+      <Search
+        placeholder="Search..."
+        onSearch={value => console.log(value)}
+      />
+    </div>
     <Menu theme="dark" mode="inline" defaultSelectedKeys={['0']}>
       <Menu.Item key="0">
         <span className="nav-text">Enclose.IO</span>
@@ -52,7 +57,9 @@ ReactDOM.render(
       </Menu.Item>
     </Menu>
     <div className="ant-layout-sider-trigger addprj">
-      <Button ghost icon="folder-add">Add Project</Button>
+      <a href="https://github.com/pmq20/enclose-io/issues/new">
+        <Button ghost icon="folder-add">Add Project</Button>
+      </a>
     </div>
   </Sider>
   <Layout>

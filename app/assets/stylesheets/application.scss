@@ -17,24 +17,44 @@
 .logo a {
   display: block;
   color: rgba(255, 255, 255, 0.67);
-  background: transparent image-url("enclose.png") no-repeat scroll 12px 0;
+  background: transparent image-url("enclose.png") no-repeat scroll 10px 0;
   background-size: 40px;
   line-height: 44px;
   height: 40px;
   text-indent: 62px;
-  font-size: 18px;
+  font-size: 16px;
+  font-family: Raleway, Hiragino Sans GB, sans-serif;
   margin: 16px;
   text-decoration: none !important;
 }
 
+.searchprj {
+  caret-color: rgba(255, 255, 255, 0.67);
+  i {
+    color: rgba(255, 255, 255, 0.67);
+  }
+  input {
+    color: white;
+    text-indent: 17px;
+    height: 42px;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+    background: black;
+  }
+}
+
 .addprj {
+  position: fixed !important;
+  width: 200px !important;
+  background: transparent !important;
+  cursor: default !important;
   padding-left: 0px;
-}
-.addprj button{
-  margin-left: -8px;
-  z-index: 9999;
-  opacity: 0.67;
-}
-.addprj button:hover {
-  opacity: 1;
+  button {
+    color: rgba(255, 255, 255, 0.67);
+    border-color: rgba(255, 255, 255, 0.67);
+    margin-left: -8px;
+    z-index: 9999;
+  }
 }
