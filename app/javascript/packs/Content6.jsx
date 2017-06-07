@@ -2,6 +2,7 @@ import React from 'react';
 import TweenOne from 'rc-tween-one';
 import QueueAnim from 'rc-queue-anim';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
+import { Icon } from 'antd';
 
 class Content extends React.Component {
 
@@ -19,7 +20,7 @@ class Content extends React.Component {
       id={`${this.props.id}-block${i}`}
     >
       <span>
-        <img src={item.img} width="100%" />
+        <Icon type={item.img} />
       </span>
       <h2>{item.title}</h2>
       <p>{item.content}</p>
@@ -30,9 +31,9 @@ class Content extends React.Component {
     const props = Object.assign({}, this.props);
     const isMode = props.isMode;
     const dataSource = [
-      { img: 'https://zos.alipayobjects.com/rmsportal/NKBELAOuuKbofDD.png', title: 'todo', content: 'todo，todo，todo，todo。' },
-      { img: 'https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png', title: 'todo', content: 'todo，todo，todo。\ntodo，todo。' },
-      { img: 'https://zos.alipayobjects.com/rmsportal/MNdlBNhmDBLuzqp.png', title: 'todo', content: 'todo、todo、todo，todo、todo、todo。' },
+      { img: 'cloud-download-o', title: 'Fetching from the Cloud', content: 'Optinally enable AutoUpdate at compile time, after distribution it will fetch the latest version string from the cloud when ran.' },
+      { img: 'question', title: 'Prompting the User', content: 'When a new version is detected, it prints a message to stderr asking whether to update. Defaults to no after 10s timeout.' },
+      { img: 'swap', title: 'In-place Update', content: 'When updating started, the executable downloads the new version to a temporary directory, and replaces itself with it.' },
     ];
     const ulChildren = dataSource.map(this.getBlockChildren);
     delete props.isMode;
@@ -81,7 +82,7 @@ class Content extends React.Component {
             id={`${props.id}-img`}
             resetStyleBool
           >
-            <img width="100%" src="https://zos.alipayobjects.com/rmsportal/VHGOVdYyBwuyqCx.png" />
+            <img width="100%" src={window.gif2} />
           </TweenOne>
         </OverPack>
       </div>
