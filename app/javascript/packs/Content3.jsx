@@ -19,10 +19,10 @@ class Content extends React.Component {
     const blockArray = [
       { icon: 'hourglass', title: 'Faster', content: 'No need to download hundreds of files via npm or gem to distribute your application. Just toss a single file.' },
       { icon: 'appstore', title: 'Portable', content: 'Pack your apps into standard executables that work on computers without Node.js or Ruby installed.' },
-      { icon: 'lock', title: 'Lockdown', content: 'Protect your source code from being viewed or tampered. Confine also dependencies into a single box.' },
+      { icon: 'lock', title: 'Lockdown', content: 'Protect your source code from being viewed or tampered with. Confine dependencies into a single box.' },
       { icon: 'solution', title: 'EdgeCutting', content: 'Write softwares using latest libs and language features, without worrying about user\'s installed versions.' },
       { icon: 'clock-circle-o', title: 'AutoUpdate', content: 'After being distributed, enable the software to easily upgrade itself by downloading and replacing itself.' },
-      { icon: 'meh-o', title: 'Jealousy', content: 'Newer languages like Go compiles a project into a nice executable, so should good ol\' Node.js and Ruby.' },
+      { icon: 'meh-o', title: 'Jealousy', content: 'Newer languages like Go compiles a project into a nice executable, why can\'t good ol\' Node.js and Ruby?' },
     ];
     const children = blockArray.map((item, i) => {
       const id = `block${i}`;
@@ -65,7 +65,7 @@ class Content extends React.Component {
             id={`${props.id}-title`}
             reverseDelay={100}
           >
-             Why Compiling
+             Why Compiling?
           </TweenOne>
           <TweenOne
             key="p"
@@ -73,7 +73,7 @@ class Content extends React.Component {
             component="p"
             id={`${props.id}-titleContent`}
           >
-            Here are the reasons why we started the project in the first place.
+            Here are the reasons why we started the project.
           </TweenOne>
           <QueueAnim
             key="ul"
