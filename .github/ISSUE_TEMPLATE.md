@@ -1,10 +1,10 @@
 <!--
 Thank you for adding a project to Enclose.IO.
 
-As both Node.js Compiler and Ruby Compiler are still being polished,
-we have not yet automated the project adding process yet.
+As our compilers are still being polished,
+we have not automated the project adding process yet.
 
-Please fill in the template below and we will compile and add it manually.
+Please fill in the template below and we will add your project.
 -->
 
 * **Project Name**: e.g. CoffeeScript
