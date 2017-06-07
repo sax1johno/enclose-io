@@ -17,8 +17,6 @@ import { LocaleProvider } from 'antd';
 import enUS from 'antd/lib/locale-provider/en_US';
 
 const { Header, Content, Footer, Sider } = Layout;
-const Search = Input.Search;
-const ButtonGroup = Button.Group;
 
 ReactDOM.render(
 <LocaleProvider locale={enUS}>

@@ -36,10 +36,16 @@ class Content extends React.Component {
             id={`${props.id}-textWrapper`}
           >
             <h1 key="h1" id={`${props.id}-title`}>
-              todo
+              Ruby Compiler
             </h1>
             <p key="p" id={`${props.id}-content`}>
-              todo，todo，todo/todo，todo。todo，todo，todo/todo，todo。
+              Ahead-of-time (AOT) Compiler Designed for Ruby. <br />
+              <ul>
+                <li>- Compiling your Ruby application into a single executable</li>
+                <li>- Rails and Native C extensions Fully Supported</li>
+                <li>- Open Source, MIT Licensed</li>
+              </ul>
+              <iframe style={{marginTop: 10}} src="https://ghbtns.com/github-btn.html?user=pmq20&repo=ruby-compiler&type=star&count=true" frameBorder="0" scrolling="0" width="170px" height="20px"></iframe>
             </p>
           </QueueAnim>
           <TweenOne
@@ -50,7 +56,7 @@ class Content extends React.Component {
             resetStyleBool
           >
             <span id={`${props.id}-img`}>
-              <img width="100%" src="https://zos.alipayobjects.com/rmsportal/tvQTfCupGUFKSfQ.png" />
+              <img width="100%" src={ window.intro_rubyc_png } />
             </span>
           </TweenOne>
         </OverPack>

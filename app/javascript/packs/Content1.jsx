@@ -34,7 +34,7 @@ class Content extends React.Component {
             resetStyleBool
           >
             <span id={`${props.id}-img`}>
-              <img width="100%" src="https://zos.alipayobjects.com/rmsportal/nLzbeGQLPyBJoli.png" />
+              <img width="100%" src={ window.intro_nodec_png } />
             </span>
           </TweenOne>
           <QueueAnim
@@ -49,7 +49,13 @@ class Content extends React.Component {
               Node.js Compiler
             </h1>
             <p key="p" id={`${props.id}-content`}>
-              todo、todo、todo，todo。todo、todo、todo，todo。todo、todo、todo，todo。
+              Ahead-of-time (AOT) Compiler Designed for Node.js <br />
+              <ul>
+                <li>- Compiling your Node.js application into a single executable.</li>
+                <li>- Dynamic require and C++ modules Fully Supported</li>
+                <li>- Open Source, MIT Licensed</li>
+              </ul>
+              <iframe style={{marginTop: 10}} src="https://ghbtns.com/github-btn.html?user=pmq20&repo=node-compiler&type=star&count=true" frameBorder="0" scrolling="0" width="170px" height="20px"></iframe>
             </p>
           </QueueAnim>
         </OverPack>
