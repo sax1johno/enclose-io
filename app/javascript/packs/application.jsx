@@ -18,15 +18,13 @@ import enUS from 'antd/lib/locale-provider/en_US';
 
 const { Header, Content, Footer, Sider } = Layout;
 const Search = Input.Search;
+const ButtonGroup = Button.Group;
 
 ReactDOM.render(
 <LocaleProvider locale={enUS}>
   <Layout style={{ height: '100vh' }}>
   <Sider style={{ overflow: 'auto', paddingBottom: '48px' }}>
     <div className="logo"><a href="/">Enclose.IO</a></div>
-    <div className="searchprj">
-      <Search placeholder="Search Projects..."/>
-    </div>
     <Menu theme="dark" mode="inline" defaultSelectedKeys={['0']}>
       <Menu.Item key="0">
         <span className="nav-text">Home</span>
@@ -62,11 +60,6 @@ ReactDOM.render(
         <span className="nav-text">Homeland</span>
       </Menu.Item>
     </Menu>
-    <div className="ant-layout-sider-trigger addprj">
-      <a href="https://github.com/pmq20/enclose-io/issues/new">
-        <Button ghost icon="plus">Add Project</Button>
-      </a>
-    </div>
   </Sider>
 </Layout>
 </LocaleProvider>, document.getElementById('sidebar'));

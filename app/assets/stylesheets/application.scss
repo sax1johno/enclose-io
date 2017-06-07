@@ -46,34 +46,3 @@ html {
     color: white;
   }
 }
-
-.searchprj {
-  caret-color: rgba(255, 255, 255, 0.67);
-  i {
-    color: rgba(255, 255, 255, 0.67);
-  }
-  input {
-    color: white;
-    text-indent: 17px;
-    height: 42px;
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    border-radius: 0;
-    background: transparent;
-  }
-}
-
-.addprj {
-  position: fixed !important;
-  width: 200px !important;
-  background: transparent !important;
-  cursor: default !important;
-  padding-left: 0px;
-  button {
-    color: rgba(255, 255, 255, 0.67);
-    border-color: rgba(255, 255, 255, 0.67);
-    margin-left: -8px;
-    z-index: 9999;
-  }
-}
