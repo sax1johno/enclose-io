@@ -58,6 +58,11 @@ ReactDOM.render(
         <span className="nav-text">Homeland</span>
       </Menu.Item>
     </Menu>
+    <div className="ant-layout-sider-trigger addprj">
+      <a href="https://github.com/pmq20/enclose-io/issues/new">
+        <Button type="primary" icon="folder-add">Add a Project</Button>
+      </a>
+    </div>
   </Sider>
 </Layout>
 </LocaleProvider>, document.getElementById('sidebar'));

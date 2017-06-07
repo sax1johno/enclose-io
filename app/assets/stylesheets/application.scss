@@ -46,3 +46,15 @@ html {
     color: white;
   }
 }
+
+.addprj {
+  position: fixed !important;
+  width: 200px !important;
+  background: transparent !important;
+  cursor: default !important;
+  padding-left: 0px;
+  button {
+    margin-left: -8px;
+    z-index: 9999;
+  }
+}
