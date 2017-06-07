@@ -28,7 +28,7 @@ class Content extends React.Component {
             reverseDelay={300}
             id={`${props.id}-title`}
           >
-            todo
+            How it Works
           </TweenOne>
           <TweenOne
             animation={Object.assign({}, animation, { delay: 200 })}
@@ -37,7 +37,7 @@ class Content extends React.Component {
             reverseDelay={200}
             id={`${props.id}-content`}
           >
-            todo，todo
+            Check out one of our technical presentations.
           </TweenOne>
           <TweenOne
             key="video"
@@ -45,9 +45,16 @@ class Content extends React.Component {
             className={`${props.className}-video`}
             id={`${props.id}-video`}
           >
-            {isMode ?
-              (<video src={videoChildren} width="100%" loop />) :
-              (<VideoPlay loop src={videoChildren} width="100%" />)}
+            <iframe frameBorder="0" src="http://speakerdeck.com/player/ea830897c7b94dff84e55be3b88082e9"
+                    style={{
+                            border: 0,
+                            background: 'transparent',
+                            margin: 0,
+                            padding: 0,
+                            borderRadius: '5px',
+                            width: '710px',
+                            height: '594.5px',
+                          }} ></iframe>
           </TweenOne>
         </OverPack>
       </div>

@@ -14,7 +14,7 @@ class Content extends React.Component {
 
   getChildrenToRender = (item, i) => {
     const id = `block${i}`;
-    return (<li
+    return (<a href={item.href}><li
       key={i}
       id={`${this.props.id}-${id}`}
     >
@@ -22,7 +22,7 @@ class Content extends React.Component {
         <span><img src={item.img} height="100%" /></span>
         <p>{item.content}</p>
       </div>
-    </li>);
+    </li></a>);
   }
 
   getEnterAnim = (e, isMode) => {
@@ -36,14 +36,10 @@ class Content extends React.Component {
     const isMode = props.isMode;
     delete props.isMode;
     const dataArray = [
-      { img: 'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg', content: 'Ant Design' },
-      { img: 'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg', content: 'Ant Motion' },
-      { img: 'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg', content: 'Ant Design' },
-      { img: 'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg', content: 'Ant Motion' },
-      { img: 'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg', content: 'Ant Design' },
-      { img: 'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg', content: 'Ant Motion' },
-      { img: 'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg', content: 'Ant Design' },
-      { img: 'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg', content: 'Ant Motion' },
+      { href: 'https://github.com/pmq20', img: 'https://avatars3.githubusercontent.com/u/13315?v=3&s=198', content: 'Minqi Pan' },
+      { href: 'https://github.com/SounderLiu', img: 'https://avatars2.githubusercontent.com/u/952996?v=3&s=198', content: 'Shengyuan Liu' },
+      { href: 'https://github.com/lexor90', img: 'https://avatars2.githubusercontent.com/u/1769352?v=3&s=198', content: 'Alessandro Agosto' },
+      { href: 'https://github.com/ibigbug', img: 'https://avatars2.githubusercontent.com/u/543405?v=3&s=198', content: 'Yuwei Ba' },
     ];
     const childrenToRender = dataArray.map(this.getChildrenToRender);
     return (
@@ -61,7 +57,7 @@ class Content extends React.Component {
             reverseDelay={300}
             id={`${props.id}-title`}
           >
-            todo
+            Authors
           </TweenOne>
           <TweenOne
             animation={{ y: '+=30', opacity: 0, type: 'from', delay: 200, ease: 'easeOutQuad' }}
@@ -70,7 +66,9 @@ class Content extends React.Component {
             reverseDelay={200}
             id={`${props.id}-content`}
           >
-            todo
+            We would like to express our special thanks of gratitude to
+            the authors who have written the source code, <br />
+            without whom all of these would not have been possible.
           </TweenOne>
           <TweenOneGroup
             className={`${props.className}-img-wrapper`}

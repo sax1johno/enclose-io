@@ -57,13 +57,13 @@ class Content extends React.Component {
               key="h1"
               id={`${props.id}-title`}
             >
-              todo
+              Learn More
             </h1>
             <p
               key="p"
               id={`${props.id}-content`}
             >
-              todo
+              Here are more useful resources on learning how it works.
             </p>
             <QueueAnim
               component="ul"

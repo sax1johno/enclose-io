@@ -36,10 +36,10 @@ class Content extends React.Component {
             id={`${props.id}-textWrapper`}
           >
             <h1 key="h1" id={`${props.id}-title`}>
-              Ruby Compiler
+              <a href="https://github.com/pmq20/ruby-compiler">Ruby Compiler</a>
             </h1>
             <p key="p" id={`${props.id}-content`}>
-              Ahead-of-time (AOT) Compiler Designed for Ruby. <br />
+              Ahead-of-time (AOT) Compiler designed for Ruby. <br />
               <ul>
                 <li>- Compiling your Ruby application into a single executable</li>
                 <li>- Rails and Native C extensions Fully Supported</li>

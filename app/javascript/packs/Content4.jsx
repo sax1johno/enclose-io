@@ -26,9 +26,9 @@ class Content extends React.Component {
     const props = Object.assign({}, this.props);
     delete props.isMode;
     const dataSource = [
-      { icon: 'https://zos.alipayobjects.com/rmsportal/WBnVOjtIlGWbzyQivuyq.png', title: 'todo', content: 'todo、todo、todo' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/YPMsLQuCEXtuEkmXTTdk.png', title: 'todo', content: 'todo' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/EkXWVvAaFJKCzhMmQYiX.png', title: 'todo', content: 'todo' },
+      { icon: window.windows_png, title: 'Windows', content: 'Windows support is one of our top priorities. By compiling your project to one exe file, you just made distribution to Windows user a single download away. Non-technical users never have to deal with Node.js and npm, or Ruby and gem installations any more.' },
+      { icon: window.macos_png, title: 'macOS', content: 'todo' },
+      { icon: window.linux_png, title: 'Linux', content: 'While AppImage, a similar project, supports only Linux with kernels that enabled SquashFS, we put no such restrictions. We embedded SquashFS I/O abilities into your product via libsquash, so your product could run on a wider spectrum of Linux distributions.' },
     ];
     const listChildren = dataSource.map(this.getBlockChildren);
     return (
@@ -47,7 +47,7 @@ class Content extends React.Component {
             reverseDelay={300}
             id={`${props.id}-title`}
           >
-            todo
+            Distribute to Multi-OS
           </TweenOne>
           <QueueAnim
             component="ul" type="bottom" key="block" leaveReverse

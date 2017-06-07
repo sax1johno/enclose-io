@@ -68,7 +68,7 @@ class Content extends React.Component {
     delete props.isMode;
     const childrenData = [
       {
-        tag: { tag: 'PHONE', icon: 'https://zos.alipayobjects.com/rmsportal/XnzcslQvRoBHMHd.svg' },
+        tag: { tag: 'On Desktop', icon: 'https://zos.alipayobjects.com/rmsportal/XnzcslQvRoBHMHd.svg' },
         img: <img width="100%" src="https://zos.alipayobjects.com/rmsportal/xBrUaDROgtFBRRL.png" />,
         text: `<h3>todo</h3>
 todo，todo，todo，todo。
@@ -78,7 +78,7 @@ todo，todo，todo。todo，todo。
 todo、todo、todo，todo、todo、todo。`,
       },
       {
-        tag: { tag: 'TABLET', icon: 'https://zos.alipayobjects.com/rmsportal/XnzcslQvRoBHMHd.svg' },
+        tag: { tag: 'On Servers', icon: 'https://zos.alipayobjects.com/rmsportal/XnzcslQvRoBHMHd.svg' },
         img: <img width="100%" src="https://zos.alipayobjects.com/rmsportal/xBrUaDROgtFBRRL.png" />,
         text: `<h3>todo</h3>
 todo，todo，todo，todo。
@@ -88,7 +88,7 @@ todo，todo，todo。todo，todo。
 todo、todo、todo，todo、todo、todo。`,
       },
       {
-        tag: { tag: 'DESKTOP', icon: 'https://zos.alipayobjects.com/rmsportal/XnzcslQvRoBHMHd.svg' },
+        tag: { tag: 'On Workstations', icon: 'https://zos.alipayobjects.com/rmsportal/XnzcslQvRoBHMHd.svg' },
         img: <img width="100%" src="https://zos.alipayobjects.com/rmsportal/xBrUaDROgtFBRRL.png" />,
         text: `<h3>todo</h3>
 todo，todo，todo，todo。
@@ -115,7 +115,7 @@ todo、todo、todo，todo、todo、todo。`,
             reverseDelay={200}
             id={`${props.id}-title`}
           >
-            todo
+            Use Scenarios
           </TweenOne>
           <TweenOne
             animation={{ y: '+=30', opacity: 0, type: 'from', delay: 100 }}
@@ -124,7 +124,7 @@ todo、todo、todo，todo、todo、todo。`,
             reverseDelay={100}
             id={`${props.id}-content`}
           >
-            todo，todo
+            Here are 3 scenarios where enclosed executables could help, among many others.
           </TweenOne>
           <TweenOne.TweenOneGroup
             key="tabs"

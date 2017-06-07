@@ -64,7 +64,7 @@ class Content extends React.Component {
             id={`${props.id}-title`}
             reverseDelay={100}
           >
-             todo
+             Why Compiling
           </TweenOne>
           <TweenOne
             key="p"
