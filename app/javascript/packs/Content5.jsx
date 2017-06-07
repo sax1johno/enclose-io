@@ -37,7 +37,8 @@ class Content extends React.Component {
             reverseDelay={200}
             id={`${props.id}-content`}
           >
-            Check out one of our technical presentations.
+            Check out one of our technical presentations: <br />
+            <a href="https://speakerdeck.com/pmq20/node-dot-js-compiler-compiling-your-node-dot-js-application-into-a-single-executable">Node.js Compiler: compiling your Node.js application into a single executable</a>.
           </TweenOne>
           <TweenOne
             key="video"

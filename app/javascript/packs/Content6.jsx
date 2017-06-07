@@ -57,13 +57,13 @@ class Content extends React.Component {
               key="h1"
               id={`${props.id}-title`}
             >
-              Learn More
+              AutoUpdate
             </h1>
             <p
               key="p"
               id={`${props.id}-content`}
             >
-              Here are more useful resources on learning how it works.
+              Combined with cloud services provided by Enclose.IO, you could keep your users up to date with your latest release.
             </p>
             <QueueAnim
               component="ul"

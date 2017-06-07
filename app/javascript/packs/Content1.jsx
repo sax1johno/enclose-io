@@ -49,9 +49,9 @@ class Content extends React.Component {
               <a href="https://github.com/pmq20/node-compiler">Node.js Compiler</a>
             </h1>
             <p key="p" id={`${props.id}-content`}>
-              Ahead-of-time (AOT) Compiler designed for Node.js <br />
+              Ahead-of-time (AOT) Compiler designed for Node.js.<br />
               <ul>
-                <li>- Compiling your Node.js application into a single executable.</li>
+                <li>- Compiling your Node.js application into a single executable</li>
                 <li>- Dynamic require and C++ modules Fully Supported</li>
                 <li>- Open Source, MIT Licensed</li>
               </ul>

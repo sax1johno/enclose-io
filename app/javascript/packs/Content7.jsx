@@ -70,31 +70,31 @@ class Content extends React.Component {
       {
         tag: { tag: 'On Desktop', icon: 'https://zos.alipayobjects.com/rmsportal/XnzcslQvRoBHMHd.svg' },
         img: <img width="100%" src="https://zos.alipayobjects.com/rmsportal/xBrUaDROgtFBRRL.png" />,
-        text: `<h3>todo</h3>
+        text: `<h3>Protect Intellectual Properties</h3>
 todo，todo，todo，todo。
-<h3>todo</h3>
+<h3>Distribute to non-technical users</h3>
 todo，todo，todo。todo，todo。
-<h3>todo</h3>
+<h3>Merchandise softwares</h3>
 todo、todo、todo，todo、todo、todo。`,
       },
       {
         tag: { tag: 'On Servers', icon: 'https://zos.alipayobjects.com/rmsportal/XnzcslQvRoBHMHd.svg' },
         img: <img width="100%" src="https://zos.alipayobjects.com/rmsportal/xBrUaDROgtFBRRL.png" />,
-        text: `<h3>todo</h3>
+        text: `<h3>Easier CI</h3>
 todo，todo，todo，todo。
-<h3>todo</h3>
-todo，todo，todo。todo，todo。
-<h3>todo</h3>
+<h3>Easier Deployment</h3>
+Just drop it! And it's deployed
+<h3>Quicker Startup</h3>
 todo、todo、todo，todo、todo、todo。`,
       },
       {
         tag: { tag: 'On Workstations', icon: 'https://zos.alipayobjects.com/rmsportal/XnzcslQvRoBHMHd.svg' },
         img: <img width="100%" src="https://zos.alipayobjects.com/rmsportal/xBrUaDROgtFBRRL.png" />,
-        text: `<h3>todo</h3>
+        text: `<h3>Less Pollution</h3>
 todo，todo，todo，todo。
-<h3>todo</h3>
+<h3>More Runtimes</h3>
 todo，todo，todo。todo，todo。
-<h3>todo</h3>
+<h3>Stay Up to Date</h3>
 todo、todo、todo，todo、todo、todo。`,
       },
     ];
@@ -115,7 +115,7 @@ todo、todo、todo，todo、todo、todo。`,
             reverseDelay={200}
             id={`${props.id}-title`}
           >
-            Use Scenarios
+            Use Cases
           </TweenOne>
           <TweenOne
             animation={{ y: '+=30', opacity: 0, type: 'from', delay: 100 }}

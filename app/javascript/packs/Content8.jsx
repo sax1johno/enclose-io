@@ -67,7 +67,7 @@ class Content extends React.Component {
             id={`${props.id}-content`}
           >
             We would like to express our special thanks of gratitude to
-            the authors who have written the source code, <br />
+            our authors who have contributed priceless source code, <br />
             without whom all of these would not have been possible.
           </TweenOne>
           <TweenOneGroup
