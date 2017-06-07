@@ -2,6 +2,7 @@ import React from 'react';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
+import { Icon } from 'antd';
 
 class Content extends React.Component {
 
@@ -16,12 +17,12 @@ class Content extends React.Component {
     delete props.isMode;
     const oneAnim = { y: '+=30', opacity: 0, type: 'from', ease: 'easeOutQuad' };
     const blockArray = [
-      { icon: 'https://zos.alipayobjects.com/rmsportal/ScHBSdwpTkAHZkJ.png', title: 'todo', content: 'todo、todo、todo，todo。' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/NKBELAOuuKbofDD.png', title: 'todo', content: 'todo，todo。' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png', title: 'todo', content: 'todo，todo，todo。' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/MNdlBNhmDBLuzqp.png', title: 'todo', content: 'todoAPPtodo；todo，todo。' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/UsUmoBRyLvkIQeO.png', title: 'todo', content: 'todo，todo，todo/todo，todo。' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/ipwaQLBLflRfUrg.png', title: 'todo', content: 'todo、todo，PBtodo、todo。' },
+      { icon: 'hourglass', title: 'Faster', content: 'No need to download hundreds of files via npm or gem to deploy your application. Deploy it as a single file.' },
+      { icon: 'appstore', title: 'Portable', content: 'Pack your apps into standard executables that work on computers without Node.js or Ruby installed.' },
+      { icon: 'lock', title: 'Lockdown', content: 'Protect your source code from being viewed or tampered. Confine dependencies into a single box.' },
+      { icon: 'solution', title: 'EdgeCutting', content: 'Write programs using latest libs and language features, without worrying about user\'s installed versions.' },
+      { icon: 'clock-circle-o', title: 'AutoUpdate', content: 'After being distributed, enable the software to easily upgrade itself by downloading and replacing itself.' },
+      { icon: 'meh-o', title: 'Jealousy', content: 'Newer languages like Go compiles a project into a nice executable, so should good ol\' Node.js and Ruby.' },
     ];
     const children = blockArray.map((item, i) => {
       const id = `block${i}`;
@@ -39,7 +40,7 @@ class Content extends React.Component {
           className="img"
           key="img"
         >
-          <img src={item.icon} width="100%" />
+          <Icon type={item.icon} />
         </TweenOne>
         <div className="text">
           <TweenOne key="h1" animation={childrenAnim} component="h1">
@@ -72,7 +73,7 @@ class Content extends React.Component {
             component="p"
             id={`${props.id}-titleContent`}
           >
-            todo
+            Here are the reasons why we started these projects in the first place.
           </TweenOne>
           <QueueAnim
             key="ul"

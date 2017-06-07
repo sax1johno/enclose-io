@@ -68,7 +68,7 @@ class Content extends React.Component {
     delete props.isMode;
     const childrenData = [
       {
-        tag: { tag: 'Desktop', icon: 'desktop' },
+        tag: { tag: 'Desktops', icon: 'desktop' },
         img: <img width="100%" src="https://zos.alipayobjects.com/rmsportal/xBrUaDROgtFBRRL.png" />,
         text: `<h3>Protect Intellectual Properties</h3>
 todo，todo，todo，todo。

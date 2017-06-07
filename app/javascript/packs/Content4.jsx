@@ -26,9 +26,9 @@ class Content extends React.Component {
     const props = Object.assign({}, this.props);
     delete props.isMode;
     const dataSource = [
-      { icon: window.windows_png, title: 'Windows', content: 'Windows support is one of our top priorities. By compiling your project to one exe file, you just made distribution to Windows user a single download away. Non-technical users never have to deal with Node.js and npm, or Ruby and gem installations any more.' },
-      { icon: window.macos_png, title: 'macOS', content: 'todo' },
-      { icon: window.linux_png, title: 'Linux', content: 'While AppImage, a similar project, supports only Linux with kernels that enabled SquashFS, we put no such restrictions. We embedded SquashFS I/O abilities into your product via libsquash, so your product could run on a wider spectrum of Linux distributions.' },
+      { icon: window.windows_png, title: 'Windows', content: 'Windows support is one of our top priorities. By compiling your source code into one exe file, you just made distribution to end-users a single download away. Non-technical users never have to deal with Node.js / npm, or Ruby / gem installations any more.' },
+      { icon: window.macos_png, title: 'macOS', content: 'MacOS is popular among developers and designers, and that makes distribution to macOS important. We find it useful to compile macOS tools into single executables, making them easy to install and upgrade. Examples are Yarn, Homebrew, and even Ruby itself.' },
+      { icon: window.linux_png, title: 'Linux', content: 'Linux is important when it comes to distributing softwares to servers. While AppImage supports only Linux with kernels that enabled SquashFS, we put no such restrictions at all. Your software could run on the widest spectrum of Linux distributions.' },
     ];
     const listChildren = dataSource.map(this.getBlockChildren);
     return (
