@@ -17,10 +17,10 @@ class Content extends React.Component {
     delete props.isMode;
     const oneAnim = { y: '+=30', opacity: 0, type: 'from', ease: 'easeOutQuad' };
     const blockArray = [
-      { icon: 'hourglass', title: 'Faster', content: 'No need to download hundreds of files via npm or gem to deploy your application. Deploy it as a single file.' },
+      { icon: 'hourglass', title: 'Faster', content: 'No need to download hundreds of files via npm or gem to distribute your application. Just toss a single file.' },
       { icon: 'appstore', title: 'Portable', content: 'Pack your apps into standard executables that work on computers without Node.js or Ruby installed.' },
-      { icon: 'lock', title: 'Lockdown', content: 'Protect your source code from being viewed or tampered. Confine dependencies into a single box.' },
-      { icon: 'solution', title: 'EdgeCutting', content: 'Write programs using latest libs and language features, without worrying about user\'s installed versions.' },
+      { icon: 'lock', title: 'Lockdown', content: 'Protect your source code from being viewed or tampered. Confine also dependencies into a single box.' },
+      { icon: 'solution', title: 'EdgeCutting', content: 'Write softwares using latest libs and language features, without worrying about user\'s installed versions.' },
       { icon: 'clock-circle-o', title: 'AutoUpdate', content: 'After being distributed, enable the software to easily upgrade itself by downloading and replacing itself.' },
       { icon: 'meh-o', title: 'Jealousy', content: 'Newer languages like Go compiles a project into a nice executable, so should good ol\' Node.js and Ruby.' },
     ];
@@ -73,7 +73,7 @@ class Content extends React.Component {
             component="p"
             id={`${props.id}-titleContent`}
           >
-            Here are the reasons why we started these projects in the first place.
+            Here are the reasons why we started the project in the first place.
           </TweenOne>
           <QueueAnim
             key="ul"
