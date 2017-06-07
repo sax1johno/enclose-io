@@ -66,7 +66,7 @@ class Content extends React.Component {
             reverseDelay={200}
             id={`${props.id}-content`}
           >
-            We would like to express our special thanks of gratitude to
+            We would like to express our deepest thanks of gratitude to
             our authors who have contributed priceless source code, <br />
             without whom all of these would not have been possible.
           </TweenOne>

@@ -1,7 +1,7 @@
 import React from 'react';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import { Tabs } from 'antd';
+import { Tabs, Icon } from 'antd';
 
 const TabPane = Tabs.TabPane;
 
@@ -35,7 +35,7 @@ class Content extends React.Component {
           className={`${this.props.className}-tag`}
           id={`${this.props.id}-tagBlock${i}`}
         >
-          <i><img src={tag.icon} width="100%" /></i>
+          <Icon type={tag.icon} />
           {tag.tag}
         </span>)}
       >
@@ -68,7 +68,7 @@ class Content extends React.Component {
     delete props.isMode;
     const childrenData = [
       {
-        tag: { tag: 'On Desktop', icon: 'https://zos.alipayobjects.com/rmsportal/XnzcslQvRoBHMHd.svg' },
+        tag: { tag: 'Desktop', icon: 'desktop' },
         img: <img width="100%" src="https://zos.alipayobjects.com/rmsportal/xBrUaDROgtFBRRL.png" />,
         text: `<h3>Protect Intellectual Properties</h3>
 todo，todo，todo，todo。
@@ -78,23 +78,23 @@ todo，todo，todo。todo，todo。
 todo、todo、todo，todo、todo、todo。`,
       },
       {
-        tag: { tag: 'On Servers', icon: 'https://zos.alipayobjects.com/rmsportal/XnzcslQvRoBHMHd.svg' },
-        img: <img width="100%" src="https://zos.alipayobjects.com/rmsportal/xBrUaDROgtFBRRL.png" />,
-        text: `<h3>Easier CI</h3>
-todo，todo，todo，todo。
-<h3>Easier Deployment</h3>
-Just drop it! And it's deployed
-<h3>Quicker Startup</h3>
-todo、todo、todo，todo、todo、todo。`,
-      },
-      {
-        tag: { tag: 'On Workstations', icon: 'https://zos.alipayobjects.com/rmsportal/XnzcslQvRoBHMHd.svg' },
+        tag: { tag: 'Workstations', icon: 'code-o' },
         img: <img width="100%" src="https://zos.alipayobjects.com/rmsportal/xBrUaDROgtFBRRL.png" />,
         text: `<h3>Less Pollution</h3>
 todo，todo，todo，todo。
 <h3>More Runtimes</h3>
 todo，todo，todo。todo，todo。
 <h3>Stay Up to Date</h3>
+todo、todo、todo，todo、todo、todo。`,
+      },
+      {
+        tag: { tag: 'Servers', icon: 'database' },
+        img: <img width="100%" src="https://zos.alipayobjects.com/rmsportal/xBrUaDROgtFBRRL.png" />,
+        text: `<h3>Easier CI</h3>
+todo，todo，todo，todo。
+<h3>Easier Deployment</h3>
+Just drop it! And it's deployed
+<h3>Quicker Startup</h3>
 todo、todo、todo，todo、todo、todo。`,
       },
     ];
