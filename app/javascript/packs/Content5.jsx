@@ -82,7 +82,7 @@ class Content extends React.Component {
             id={`${props.id}-img`}
             resetStyleBool
           >
-            <img width="100%" src={window.minqi_pan.gif2} />
+            <img width="100%" src={window.enclose_io.gif2} />
           </TweenOne>
         </OverPack>
       </div>

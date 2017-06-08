@@ -1,17 +1,15 @@
 <div id="welcome_index"></div>
 
 <script type="text/javascript">
-  window.minqi_pan = {
-    intro_png: <%=raw asset_path('intro.png').to_json %>,
-    intro_nodec_png: <%=raw asset_path('intro_nodec.png').to_json %>,
-    intro_rubyc_png: <%=raw asset_path('intro_rubyc.png').to_json %>,
-    windows_png: <%=raw asset_path('windows.png').to_json %>,
-    macos_png: <%=raw asset_path('macos.png').to_json %>,
-    linux_png: <%=raw asset_path('linux.png').to_json %>,
-    dist_desktop_png: <%=raw asset_path('dist_desktop.png').to_json %>,
-    dist_workstation_png: <%=raw asset_path('dist_workstation.png').to_json %>,
-    dist_server_png: <%=raw asset_path('dist_server.png').to_json %>,
-    gif2: <%=raw asset_path('gif2.gif').to_json %>,
-  };
+  window.enclose_io.intro_png = <%=raw asset_path('intro.png').to_json %>;
+  window.enclose_io.intro_nodec_png = <%=raw asset_path('intro_nodec.png').to_json %>;
+  window.enclose_io.intro_rubyc_png = <%=raw asset_path('intro_rubyc.png').to_json %>;
+  window.enclose_io.windows_png = <%=raw asset_path('windows.png').to_json %>;
+  window.enclose_io.macos_png = <%=raw asset_path('macos.png').to_json %>;
+  window.enclose_io.linux_png = <%=raw asset_path('linux.png').to_json %>;
+  window.enclose_io.dist_desktop_png = <%=raw asset_path('dist_desktop.png').to_json %>;
+  window.enclose_io.dist_workstation_png = <%=raw asset_path('dist_workstation.png').to_json %>;
+  window.enclose_io.dist_server_png = <%=raw asset_path('dist_server.png').to_json %>;
+  window.enclose_io.gif2 = <%=raw asset_path('gif2.gif').to_json %>;
 </script>
 <%= javascript_pack_tag 'Home' %>

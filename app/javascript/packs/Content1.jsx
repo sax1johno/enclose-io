@@ -34,7 +34,7 @@ class Content extends React.Component {
             resetStyleBool
           >
             <span id={`${props.id}-img`}>
-              <img width="100%" src={ window.minqi_pan.intro_nodec_png } />
+              <img width="100%" src={ window.enclose_io.intro_nodec_png } />
             </span>
           </TweenOne>
           <QueueAnim

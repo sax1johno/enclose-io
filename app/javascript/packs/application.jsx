@@ -24,27 +24,33 @@ class SiderDemo extends React.Component {
     collapsed: false,
     mode: 'inline',
   };
-  onCollapse = (collapsed) => {
+  onCollapse = (collapsed, type) => {
     if (collapsed) {
-      $('#main').css('margin-left', '64px')
+      $('#main').css('margin-left', '0');
+      setTimeout(function() {
+        $('#sidebar').css('width', '36px');
+      }, 300);
     } else {
-      $('#main').css('margin-left', '200px')
+      $('#main').css('margin-left', '200px');
+      $('#sidebar').css('width', '236px');
     }
     this.setState({
       collapsed,
       mode: collapsed ? 'vertical' : 'inline',
     });
-  }
+  };
   render() {
     return (
       <Layout style={{ height: '100vh' }}>
         <Sider
+          breakpoint="lg"
+          collapsedWidth="0"
           collapsible
           collapsed={this.state.collapsed}
           onCollapse={this.onCollapse}
         >
           <div className="logo"><a href="/">Enclose.IO</a></div>
-          <Menu theme="dark" mode={this.state.mode} defaultSelectedKeys={['1']}>
+          <Menu theme="dark" mode={this.state.mode} defaultSelectedKeys={['1']} defaultOpenKeys={['enclose-io']}>
             <SubMenu
               key="enclose-io"
               title={<span><Icon type="appstore" /><span className="nav-text">Enclose.IO</span></span>}

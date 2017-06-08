@@ -14,15 +14,15 @@ class Content extends React.Component {
 
   getChildrenToRender = (item, i) => {
     const id = `block${i}`;
-    return (<a href={item.href}><li
+    return (<li
       key={i}
       id={`${this.props.id}-${id}`}
     >
       <div className="content-wrapper">
-        <span><img src={item.img} height="100%" /></span>
+        <span><a href={item.href}><img src={item.img} height="100%" /></a></span>
         <p>{item.content}</p>
       </div>
-    </li></a>);
+    </li>);
   }
 
   getEnterAnim = (e, isMode) => {

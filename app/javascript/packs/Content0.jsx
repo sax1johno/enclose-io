@@ -26,7 +26,7 @@ class Content extends React.Component {
             key="title"
             id={`${props.id}-title`}
           >
-            <img width="100%" src={window.minqi_pan.intro_png} />
+            <img width="100%" src={window.enclose_io.intro_png} />
           </span>
           <p
             style={{ fontFamily: 'roboto, helvetica, sans-serif', fontWeight: 300, fontSize: 45 }}

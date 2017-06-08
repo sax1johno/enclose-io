@@ -14,6 +14,7 @@ import Content5 from './Content5';
 import Content6 from './Content6';
 import Content7 from './Content7';
 import Content8 from './Content8';
+import Point from './Point';
 
 import './less/antMotion_style.less';
 
@@ -26,7 +27,16 @@ export default class Home extends React.Component {
   }
 
   componentDidMount() {
-    // todo;
+    // collide
+    if ($('.ant-layout-sider-zero-width').length > 0) {
+      $('#main').css('margin-left', '0');
+      $('#sidebar').css('width', '36px');
+    }
+    // 点的位置居中
+    const list = $('.templates-list-wrapper')[0];
+    const listHeight = list.getBoundingClientRect().height;
+    list.style.marginTop = ` -${listHeight / 2}px`;
+    // 适配手机屏幕;
     this.enquireScreen((isMode) => {
       this.setState({ isMode });
     });
@@ -60,6 +70,17 @@ export default class Home extends React.Component {
     return (
       <div className="templates-wrapper">
         {children}
+        <Point data={[
+          "content_0_0",
+          "content_2_0",
+          "content_3_0",
+          "content_4_0",
+          "content_9_0",
+          "content_5_0",
+          "content_7_0",
+          "content_8_0",
+          "content_6_0",
+        ]}/>,
       </div>
     );
   }
