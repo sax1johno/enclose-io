@@ -17,6 +17,19 @@
 html {
   overflow-y: scroll;
   overflow-x: hidden;
+  font-size: 14px !important;
+}
+
+body {
+  font-size: 14px !important;
+}
+
+.ant-menu-vertical .ant-menu-item, .ant-menu-inline .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-inline .ant-menu-submenu-title {
+  font-size: 14px !important;
+}
+
+.content-template-wrapper .content-template > p {
+  font-size: 14px !important;
 }
 
 #main {

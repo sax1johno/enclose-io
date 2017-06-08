@@ -43,7 +43,7 @@ class Content extends React.Component {
           <Icon type={item.icon} />
         </TweenOne>
         <div className="text">
-          <TweenOne key="h1" animation={childrenAnim} component="h1">
+          <TweenOne key="h2" animation={childrenAnim} component="h2">
             {item.title}
           </TweenOne>
           <TweenOne key="p" animation={Object.assign({}, childrenAnim, { delay: delay + 200 })} component="p">
