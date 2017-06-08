@@ -56,7 +56,7 @@ class Content extends React.Component {
             resetStyleBool
           >
             <span id={`${props.id}-img`}>
-              <img width="100%" src={ window.intro_rubyc_png } />
+              <img width="100%" src={ window.minqi_pan.intro_rubyc_png } />
             </span>
           </TweenOne>
         </OverPack>

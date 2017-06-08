@@ -27,7 +27,7 @@
   &-text {
     display: block;
     width: 55%;
-    height: 150px;
+    height: 158px;
     vertical-align: top;
     position: absolute;
     top: 0;
@@ -52,16 +52,16 @@
 
 @media screen and (max-width: 767px) {
   .@{content0}-wrapper {
-    height: 400px;
+    height: auto;
     .@{content0} {
-      overflow: hidden;
-      width: 90%;
-      margin: auto;
+      overflow: visible;
+      width: 80%;
+      margin: 0 0 0 40px;
       &-img, &-text {
         width: 100%;
         display: block;
         position: relative;
-        text-align: center;
+        text-align: left;
       }
       &-img {
         height: 200px;
@@ -76,7 +76,7 @@
         }
       }
       &-text {
-        height: 140px;
+        height: auto;
         margin-bottom: 20px;
         p, h1 {
           width: 100%;

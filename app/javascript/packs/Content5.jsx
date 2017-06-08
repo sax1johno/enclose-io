@@ -31,8 +31,8 @@ class Content extends React.Component {
     const props = Object.assign({}, this.props);
     const isMode = props.isMode;
     const dataSource = [
-      { img: 'cloud-download-o', title: 'Fetching from the Cloud', content: 'Enable AutoUpdate at compile time, then the executable will fetch the latest version from the cloud at runtime.' },
-      { img: 'question', title: 'Prompting the User', content: 'When a new version is detected, the executable prints a message asking the user whether to update.' },
+      { img: 'cloud-download-o', title: 'Fetch', content: 'Enable AutoUpdate at compile time, then the executable will fetch the latest version from the cloud at runtime.' },
+      { img: 'question', title: 'Prompt', content: 'When a new version is detected, the executable prints a message asking the user whether to update.' },
       { img: 'swap', title: 'In-place Update', content: 'When confirmed, the executable downloads the new version to a temporary directory, and replaces itself with it.' },
     ];
     const ulChildren = dataSource.map(this.getBlockChildren);
@@ -82,7 +82,7 @@ class Content extends React.Component {
             id={`${props.id}-img`}
             resetStyleBool
           >
-            <img width="100%" src={window.gif2} />
+            <img width="100%" src={window.minqi_pan.gif2} />
           </TweenOne>
         </OverPack>
       </div>

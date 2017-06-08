@@ -17,52 +17,62 @@ import { LocaleProvider } from 'antd';
 import enUS from 'antd/lib/locale-provider/en_US';
 
 const { Header, Content, Footer, Sider } = Layout;
+const SubMenu = Menu.SubMenu;
 
-ReactDOM.render(
-<LocaleProvider locale={enUS}>
-  <Layout style={{ height: '100vh' }}>
-  <Sider style={{ overflow: 'auto', paddingBottom: '48px' }}>
-    <div className="logo"><a href="/">Enclose.IO</a></div>
-    <Menu theme="dark" mode="inline" defaultSelectedKeys={['0']}>
-      <Menu.Item key="0">
-        <span className="nav-text">Home</span>
-      </Menu.Item>
-      <Menu.Item>
-        <span className="nav-text">Node.js Compiler</span>
-      </Menu.Item>
-      <Menu.Item>
-        <span className="nav-text">Ruby Compiler</span>
-      </Menu.Item>
-      <Menu.Item>
-        <span className="nav-text">Ruby</span>
-      </Menu.Item>
-      <Menu.Item>
-        <span className="nav-text">Npm</span>
-      </Menu.Item>
-      <Menu.Item>
-        <span className="nav-text">Yarn</span>
-      </Menu.Item>
-      <Menu.Item>
-        <span className="nav-text">Fengdie</span>
-      </Menu.Item>
-      <Menu.Item>
-        <span className="nav-text">Dora</span>
-      </Menu.Item>
-      <Menu.Item>
-        <span className="nav-text">Homebrew</span>
-      </Menu.Item>
-      <Menu.Item>
-        <span className="nav-text">CocoaPods</span>
-      </Menu.Item>
-      <Menu.Item>
-        <span className="nav-text">Homeland</span>
-      </Menu.Item>
-    </Menu>
-    <div className="ant-layout-sider-trigger addprj">
-      <a href="https://github.com/pmq20/enclose-io/issues/new">
-        <Button type="primary" icon="folder-add">Add a Project</Button>
-      </a>
-    </div>
-  </Sider>
-</Layout>
-</LocaleProvider>, document.getElementById('sidebar'));
+class SiderDemo extends React.Component {
+  state = {
+    collapsed: false,
+    mode: 'inline',
+  };
+  onCollapse = (collapsed) => {
+    if (collapsed) {
+      $('#main').css('margin-left', '64px')
+    } else {
+      $('#main').css('margin-left', '200px')
+    }
+    this.setState({
+      collapsed,
+      mode: collapsed ? 'vertical' : 'inline',
+    });
+  }
+  render() {
+    return (
+      <Layout style={{ height: '100vh' }}>
+        <Sider
+          collapsible
+          collapsed={this.state.collapsed}
+          onCollapse={this.onCollapse}
+        >
+          <div className="logo"><a href="/">Enclose.IO</a></div>
+          <Menu theme="dark" mode={this.state.mode} defaultSelectedKeys={['1']} defaultOpenKeys={['enclose-io']}>
+            <SubMenu
+              key="enclose-io"
+              title={<span><Icon type="appstore" /><span className="nav-text">Enclose.IO</span></span>}
+            >
+              <Menu.Item key="1"><a href="/">Home</a></Menu.Item>
+            </SubMenu>
+          </Menu>
+        </Sider>
+        <Layout id="main_overlay">
+        </Layout>
+      </Layout>
+    );
+  }
+}
+
+ReactDOM.render(<SiderDemo />, document.getElementById('sidebar'));
+
+// ReactDOM.render(
+// <LocaleProvider locale={enUS}>
+//   <Layout style={{ height: '100vh' }}>
+//   <Sider collapsible style={{ overflow: 'auto' }}>
+//     <div className="logo"><a href="/">Enclose.IO</a></div>
+//     <Menu theme="dark" mode="inline" defaultSelectedKeys={['0']}>
+//       <Menu.Item key="0">
+//         <Icon type="home" />
+//         <span className="nav-text">Home</span>
+//       </Menu.Item>
+//     </Menu>
+//   </Sider>
+// </Layout>
+// </LocaleProvider>, document.getElementById('sidebar'));

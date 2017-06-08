@@ -69,7 +69,7 @@ class Content extends React.Component {
     const childrenData = [
       {
         tag: { tag: 'Consumers', icon: 'desktop' },
-        img: <img width="100%" src={window.dist_desktop_png} />,
+        img: <img width="100%" src={window.minqi_pan.dist_desktop_png} />,
         text: `<h3>Intellectual Property Protection</h3>
 By distributing enclosed executables, you could prohibit the end-user from viewing or tampering with your source code.
 <h3>Distribute to Non-technical Users</h3>
@@ -79,7 +79,7 @@ Build personal or enterprise softwares and make money out of it. Clearly mark th
       },
       {
         tag: { tag: 'Developers', icon: 'code-o' },
-        img: <img width="100%" src={window.dist_workstation_png} />,
+        img: <img width="100%" src={window.minqi_pan.dist_workstation_png} />,
         text: `<h3>Cleaner Environment</h3>
 Installing a tool never pollutes a developer's global <code>node_modules</code> or system gems any more. Just use the enclosed executables.
 <h3>Stay Cutting-edge</h3>
@@ -89,7 +89,7 @@ Pre-compiling source code to byte code boosts the start-up speed of the develope
       },
       {
         tag: { tag: 'Servers', icon: 'database' },
-        img: <img width="100%" src={window.dist_server_png} />,
+        img: <img width="100%" src={window.minqi_pan.dist_server_png} />,
         text: `<h3>Quicker CI</h3>
 No need to slowly build and install dependencies when running CI. Just use the enclosed executables.
 <h3>Quicker Deployment</h3>
