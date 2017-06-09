@@ -1,6 +1,8 @@
 # Node.js Compiler
 
-Cloud-based service that compiles your application into a single executable.
+Cloud-based service that compiles your application into a single executable, optionally with AutoUpdate.
+
+http://enclose.io
 
 [![Build Status](https://travis-ci.org/pmq20/enclose-io.svg?branch=master)](https://travis-ci.org/pmq20/enclose-io)
 
