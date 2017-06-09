@@ -8,5 +8,5 @@ http://enclose.io
 
 ## See Also
 
-- [Node.js Compiler](https://github.com/pmq20/node-compiler): Compiling your Node.js application into a single executable.
-- [Ruby Compiler](https://github.com/pmq20/ruby-compiler): Compiling your Ruby application into a single executable.
+- [Node.js Compiler](https://github.com/pmq20/node-compiler): Ahead-of-time (AOT) Compiler designed for Node.js.
+- [Ruby Compiler](https://github.com/pmq20/ruby-compiler): Ahead-of-time (AOT) Compiler designed for Ruby.
