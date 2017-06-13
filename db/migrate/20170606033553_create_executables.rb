@@ -9,6 +9,7 @@ class CreateExecutables < ActiveRecord::Migration[5.1]
       t.integer :phase, null: false, default: 0
       t.integer :runner_id
       t.string :runner_path
+      t.string :url
       t.timestamps
     end
   end
