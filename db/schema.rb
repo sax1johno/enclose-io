@@ -10,18 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170606033553) do
+ActiveRecord::Schema.define(version: 20170613044747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "applications", force: :cascade do |t|
-    t.string "name"
+  create_table "executables", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.string "name", null: false
+    t.string "version", null: false
+    t.integer "arch", null: false
+    t.integer "os", null: false
+    t.integer "phase", default: 0, null: false
+    t.integer "runner_id"
+    t.string "runner_path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "executables", force: :cascade do |t|
+  create_table "logs", force: :cascade do |t|
+    t.integer "executable_id"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "source", null: false
+    t.string "url", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "runners", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "arch", null: false
+    t.integer "os", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
