@@ -12,6 +12,9 @@
   </head>
 
   <body>
+    <script type="text/javascript">
+      window.enclose_io.projects = <%= raw Project.all.to_json %>;
+    </script>
     <div id="sidebar">
     </div>
     <%= javascript_pack_tag 'application' %>

@@ -50,12 +50,12 @@ class SiderDemo extends React.Component {
           onCollapse={this.onCollapse}
         >
           <div className="logo"><a href="/">Enclose.IO</a></div>
-          <Menu theme="dark" mode={this.state.mode} defaultSelectedKeys={['1']} defaultOpenKeys={['enclose-io']}>
+          <Menu theme="dark" mode={this.state.mode} defaultSelectedKeys={['-1']} defaultOpenKeys={['enclose-io']}>
             <SubMenu
               key="enclose-io"
               title={<span><Icon type="appstore" /><span className="nav-text">Enclose.IO</span></span>}
             >
-              <Menu.Item key="1"><a href="/">Home</a></Menu.Item>
+              <Menu.Item key="-1"><a href="/">Home</a></Menu.Item>
             </SubMenu>
           </Menu>
         </Sider>
