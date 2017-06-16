@@ -2,7 +2,12 @@
 <script type="text/javascript">
   window.enclose_io.defaultSelectedKeys = [<%= raw @project.id.to_s.to_json %>];
   window.enclose_io.defaultOpenKeys = [];
-  window.enclose_io.project = <%= raw @project.to_json(methods: :permalink) %>;
+  window.enclose_io.project = <%= raw @project.to_json(methods: [:permalink, :versions_filter], include: {
+    executables: {
+      only: [:id, :url, :updated_at],
+      methods: [:fullname, :updated_at_i, :version, :os, :arch]
+    }
+  }) %>;
 </script>
 <% end %>
 

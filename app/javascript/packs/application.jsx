@@ -78,19 +78,3 @@ class SiderDemo extends React.Component {
 }
 
 ReactDOM.render(<SiderDemo />, document.getElementById('sidebar'));
-
-// ReactDOM.render(
-// <LocaleProvider locale={enUS}>
-//   <Layout style={{ height: '100vh' }}>
-//   <Sider collapsible style={{ overflow: 'auto' }}>
-//     <div className="logo"><a href="/">Enclose.IO</a></div>
-//     <Menu theme="dark" mode="inline" defaultSelectedKeys={['0']}>
-//       <Menu.Item key="0">
-//         <Icon type="home" />
-//         <span className="nav-text">Home</span>
-//       </Menu.Item>
-//     </Menu>
-//   </Sider>
-// </Layout>
-// </LocaleProvider>, document.getElementById('sidebar'));
-sidebar
