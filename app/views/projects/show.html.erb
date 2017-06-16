@@ -1,0 +1,11 @@
+<% content_for :pre do %>
+<script type="text/javascript">
+  window.enclose_io.defaultSelectedKeys = [<%= raw @project.id.to_s.to_json %>];
+  window.enclose_io.defaultOpenKeys = [];
+  window.enclose_io.project = <%= raw @project.to_json(methods: :permalink) %>;
+</script>
+<% end %>
+
+<div id="projects_show"></div>
+
+<%= javascript_pack_tag 'ProjectsShow' %>

@@ -3,4 +3,8 @@ class Project < ApplicationRecord
 
   enum language: [ :ruby, :nodejs ]
   enum source: [ :npm, :rubygems, :github ]
+
+  def permalink
+    "http://enclose.io/#{token}"
+  end
 end

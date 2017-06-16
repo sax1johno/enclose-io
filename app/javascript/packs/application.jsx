@@ -50,13 +50,24 @@ class SiderDemo extends React.Component {
           onCollapse={this.onCollapse}
         >
           <div className="logo"><a href="/">Enclose.IO</a></div>
-          <Menu theme="dark" mode={this.state.mode} defaultSelectedKeys={['-1']} defaultOpenKeys={['enclose-io']}>
+          <Menu theme="dark" mode={this.state.mode} defaultSelectedKeys={ window.enclose_io.defaultSelectedKeys } defaultOpenKeys={ window.enclose_io.defaultOpenKeys }>
             <SubMenu
               key="enclose-io"
               title={<span><Icon type="appstore" /><span className="nav-text">Enclose.IO</span></span>}
             >
               <Menu.Item key="-1"><a href="/">Home</a></Menu.Item>
             </SubMenu>
+            {
+              window.enclose_io.projects.map((x) => {
+                return(
+                  <Menu.Item key={ x.id }>
+                    <a href={ '/' + x.token }>
+                      <span className="nav-text">{ x.name }</span>
+                    </a>
+                  </Menu.Item>
+                )
+              })
+            }
           </Menu>
         </Sider>
         <Layout id="main_overlay">
@@ -82,3 +93,4 @@ ReactDOM.render(<SiderDemo />, document.getElementById('sidebar'));
 //   </Sider>
 // </Layout>
 // </LocaleProvider>, document.getElementById('sidebar'));
+sidebar

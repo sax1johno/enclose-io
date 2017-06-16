@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Enclose.IO - Compiling your application into a single executable</title>
+    <title><%= title %></title>
     <%= csrf_meta_tags %>
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application' %>
     <%= stylesheet_pack_tag 'Home' %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
@@ -15,10 +15,11 @@
     <script type="text/javascript">
       window.enclose_io.projects = <%= raw Project.all.to_json %>;
     </script>
+    <%= yield :pre %>
     <div id="sidebar">
     </div>
     <%= javascript_pack_tag 'application' %>
-    <div id="main">
+    <div id="main" class="<%= params[:controller] %>">
       <%= yield %>
     </div>
   </body>

@@ -22,7 +22,7 @@ class Content extends React.Component {
       { icon: 'lock', title: 'Lockdown', content: 'Protect your source code from being viewed or tampered with. Confine dependencies into a single box.' },
       { icon: 'solution', title: 'EdgeCutting', content: 'Write softwares using latest libs and language features, without worrying about user\'s installed versions.' },
       { icon: 'clock-circle-o', title: 'AutoUpdate', content: 'After being distributed, enable the software to easily upgrade itself by downloading and replacing itself.' },
-      { icon: 'meh-o', title: 'Jealousy', content: 'Newer languages like Go compiles a project into a nice executable, why can\'t good ol\' Node.js and Ruby?' },
+      { icon: 'meh-o', title: 'Jealousy', content: 'Recent languages like Go compiles a project into a nice executable, why can\'t good ol\' Node.js and Ruby?' },
     ];
     const children = blockArray.map((item, i) => {
       const id = `block${i}`;
