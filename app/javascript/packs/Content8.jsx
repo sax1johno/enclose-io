@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from 'antd';
 import TweenOne, { TweenOneGroup } from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 
@@ -36,55 +37,82 @@ class Content extends React.Component {
     const isMode = props.isMode;
     delete props.isMode;
     const dataArray = [
-      { href: 'https://github.com/pmq20', img: 'https://avatars3.githubusercontent.com/u/13315?v=3&s=198', content: 'Minqi Pan' },
-      { href: 'https://github.com/SounderLiu', img: 'https://avatars2.githubusercontent.com/u/952996?v=3&s=198', content: 'Shengyuan Liu' },
-      { href: 'https://github.com/lexor90', img: 'https://avatars2.githubusercontent.com/u/1769352?v=3&s=198', content: 'Alessandro Agosto' },
-      { href: 'https://github.com/ibigbug', img: 'https://avatars2.githubusercontent.com/u/543405?v=3&s=198', content: 'Yuwei Ba' },
     ];
     const childrenToRender = dataArray.map(this.getChildrenToRender);
     return (
       <div
         {...props}
-        className="content-template-wrapper content4-wrapper"
+        className="content4-wrapper"
       >
-        <OverPack
-          className={`content-template ${props.className}`}
-        >
-          <TweenOne
-            animation={{ y: '+=30', opacity: 0, type: 'from', ease: 'easeOutQuad' }}
-            component="h1"
-            key="h1"
-            reverseDelay={300}
-            id={`${props.id}-title`}
-          >
-            Authors
-          </TweenOne>
-          <TweenOne
-            animation={{ y: '+=30', opacity: 0, type: 'from', delay: 200, ease: 'easeOutQuad' }}
-            component="p"
-            key="p"
-            reverseDelay={200}
-            id={`${props.id}-content`}
-          >
-            We would like to express our sincere gratitude to
-            our authors who have contributed priceless source code, <br />
-            without whom the project would not have been possible.
-          </TweenOne>
-          <TweenOneGroup
-            className={`${props.className}-img-wrapper`}
-            component="ul"
-            key="ul"
-            enter={(e) => {
-              return this.getEnterAnim(e, isMode)
-            }}
-            leave={{ y: '+=30', opacity: 0, ease: 'easeOutQuad' }}
-            id={`${props.id}-ul`}
-          >
-            {childrenToRender}
-          </TweenOneGroup>
-        </OverPack>
+      <footer id="footer">
+      <ul>
+      	<li>
+        	<h2>
+            <Icon type="github" />
+            GitHub
+        	</h2>
+        	<div>
+        		<a target="_blank " href="https://github.com/pmq20/node-compiler"><span>Node.js Compiler</span></a>
+        	</div>
+        	<div>
+        		<a target="_blank " href="https://github.com/pmq20/ruby-compiler"><span>Ruby Compiler</span></a>
+        	</div>
+        	<div>
+        		<a target="_blank " href="https://github.com/pmq20/enclose-io"><span>Enclose.IO</span></a>
+        	</div>
+      	</li>
+      	<li>
+        	<h2>
+            <Icon type="share-alt" />
+            <span>Dependencies</span>
+          </h2>
+        	<div>
+        		<a target="_blank" rel="noopener noreferrer" href="https://github.com/pmq20/libsquash"><span>Libsquash</span></a>
+            <span> - </span><span>Portable, user-land SquashFS that can be easily linked and embedded</span>
+        	</div>
+        	<div>
+        		<a href="http://squashfs.sourceforge.net/"><span>SquashFS</span></a>
+            <span> - </span><span>A compressed read-only filesystem for Linux</span>
+        	</div>
+      	</li>
+      	<li>
+        	<h2><i className="anticon anticon-link"></i>
+        	<span>Links</span></h2>
+        	<div>
+        		<a target="_blank" rel="noopener noreferrer" href="https://eggjs.org/">Egg</a><span> - </span><span>Enterprise Node.js Framework</span>
+        	</div>
+        	<div>
+        		<a target="_blank" rel="noopener noreferrer" href="https://alinode.aliyun.com/">Alinode</a><span> - </span><span>Node.js Performance Managing</span>
+        	</div>
+        	<div>
+        		<a href="http://ant.design/">Ant Design</a><span> - </span><span>UI Design Language</span>
+        	</div>
+        	<div>
+        		<a href="https://antv.alipay.com/">AntV</a><span> - </span><span>Data Visualization</span>
+        	</div>
+      	</li>
+      	<li>
+        	<h2>
+            <Icon type="team" />
+        	  <span>Authors</span>
+          </h2>
+        	<div>
+        		<a target="_blank" rel="noopener noreferrer" href="http://www.minqi-pan.com/">Minqi Pan</a>
+        	</div>
+        	<div>
+        		<a target="_blank" rel="noopener noreferrer" href="https://github.com/SounderLiu">Shengyuan Liu</a>
+        	</div>
+        	<div>
+        		<a target="_blank" rel="noopener noreferrer" href="https://github.com/lexor90">Alessandro Agosto</a>
+        	</div>
+        	<div>
+        		<a target="_blank" rel="noopener noreferrer" href="http://blog.xiaoba.me/">Yuwei Ba</a>
+        	</div>
+      	</li>
+      </ul>
+      </footer>
       </div>
-    );
+    )
   }
 }
 

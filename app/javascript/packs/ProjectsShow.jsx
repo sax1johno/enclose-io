@@ -98,7 +98,7 @@ class ProjectsShow extends React.Component {
                 <TabPane
                   tab={
                     <div>
-                      <Icon type="tag" />Latest Version: { enclose_io.project.latest_version }
+                      <Icon type="tag" />Latest: { enclose_io.project.latest_version }
                     </div>
                   }
                   key="3"

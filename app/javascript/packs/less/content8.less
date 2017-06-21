@@ -66,7 +66,7 @@
 
 @media screen and (max-width: 767px) {
   .@{content4}-wrapper {
-    height: 2000px;
+    height: auto;
     overflow: visible;
     .@{content4} {
       width: 90%;
@@ -97,4 +97,66 @@
     }
   }
 
+}
+
+#footer {
+    clear: both;
+    font-size: 12px;
+    position: relative;
+    z-index: 1;
+    color: #666;
+    background: #333;
+    h2 {
+      color: #999;
+    }
+    a {
+      color: #eee;
+    }
+}
+
+#footer ul {
+    overflow: hidden;
+    margin: 0 2%;
+    list-style: none
+}
+
+#footer ul li {
+    float: left;
+    width: 25%;
+    padding: 24px 2%
+}
+
+#footer ul li>h2 {
+    font-size: 14px;
+    margin: 0 auto 12px;
+    font-weight: 500;
+    position: relative
+}
+
+#footer ul li>h2>.anticon {
+    font-size: 16px;
+    position: absolute;
+    left: -22px;
+    top: 3px;
+    color: #aaa
+}
+
+#footer ul li>div {
+    margin: 6px 0
+}
+
+
+@media only screen and (min-width: 0) and (max-width:992px) {
+  #footer {
+      text-align: center
+  }
+
+  #footer ul li {
+      float: none;
+      width: auto
+  }
+
+  #footer ul li>h2 .anticon {
+      display: none
+  }
 }

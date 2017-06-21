@@ -79,7 +79,6 @@ export default class Home extends React.Component {
           "content_5_0",
           "content_7_0",
           "content_8_0",
-          "content_6_0",
         ]}/>,
       </div>
     );
