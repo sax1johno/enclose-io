@@ -47,7 +47,7 @@ class Content extends React.Component {
             reverseDelay={300}
             id={`${props.id}-title`}
           >
-            Distribute to Multiple OS
+            Multi-OS Support
           </TweenOne>
           <QueueAnim
             component="ul" type="bottom" key="block" leaveReverse
