@@ -17,39 +17,22 @@
 html {
   overflow-y: scroll;
   overflow-x: hidden;
+}
+
+html, body,
+.ant-menu-vertical .ant-menu-item, .ant-menu-inline .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-inline .ant-menu-submenu-title,
+.content-template-wrapper .content-template > p,
+.ant-breadcrumb,
+.ant-table,
+.ant-layout-footer,
+.ant-dropdown-menu-item,
+.ant-btn,
+.ant-card {
   font-size: 14px !important;
 }
 
-body {
-  font-size: 14px !important;
-}
-
-.ant-menu-vertical .ant-menu-item, .ant-menu-inline .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-inline .ant-menu-submenu-title {
-  font-size: 14px !important;
-}
-
-.content-template-wrapper .content-template > p {
-  font-size: 14px !important;
-}
-
-.ant-breadcrumb {
-  font-size: 14px !important;
-}
-
-.ant-table {
-  font-size: 14px !important;
-}
-
-.ant-layout-footer {
-  font-size: 14px !important;
-}
-
-.ant-dropdown-menu-item {
-  font-size: 14px !important;
-}
-
-.ant-btn {
-  font-size: 14px !important;
+.ant-card-head-title {
+  font-size: 16px !important;
 }
 
 #main {
@@ -108,4 +91,20 @@ body {
 
 .ant-layout-sider-collapsed .ant-menu-submenu-vertical > .ant-menu-submenu-title:after {
   display: none;
+}
+
+#project_show_header {
+  border: none !important;
+  box-shadow: none !important;
+  .ant-tabs-ink-bar {
+    display: none !important;
+  }
+  .ant-tabs-tab {
+    color: rgba(0, 0, 0, 0.65) !important;
+    cursor: auto;
+    padding-left: 0;
+    .anticon {
+      margin: 0 4px 0 0;
+    }
+  }
 }

@@ -4,7 +4,7 @@
   window.enclose_io.defaultOpenKeys = [];
   window.enclose_io.executables = <%= raw @executables.to_json({
     only: [:id, :url, :phase, :updated_at],
-    methods: [:fullname, :updated_at_i, :phase_i, :version, :os, :arch, :key]
+    methods: [:fullname, :updated_at_i, :phase_i, :version, :os, :arch, :key, :permalink]
   }) %>;
   window.enclose_io.project = <%= raw @project.to_json({
     methods: [:permalink, :versions_filter]

@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Table, Layout, Menu, Breadcrumb, Icon, Button, Dropdown } from 'antd';
+import { Table, Layout, Menu, Breadcrumb, Icon, Button, Dropdown, Tabs, Card } from 'antd';
 import { LocaleProvider } from 'antd';
-const { Header, Content, Footer, Sider } = Layout;
 import enUS from 'antd/lib/locale-provider/en_US';
+const { Header, Content, Footer, Sider } = Layout;
+const TabPane = Tabs.TabPane;
 
 const menu = (
   <Menu>
@@ -30,7 +31,6 @@ const columns = [{
   },
   filters: enclose_io.project.versions_filter,
   onFilter: (value, record) => {
-    console.log((value));
     if(0 === value.indexOf('version.')) {
       return record.version === value.substr('version.'.length)
     } else if (0 === value.indexOf('os.')) {
@@ -47,11 +47,7 @@ const columns = [{
   key: 'updated_at',
   sorter: (a, b) => a.updated_at_i - b.updated_at_i,
   render: (text, record) => {
-    return (
-        <time dateTime={ record.updated_at }>
-          { enclose_io.time_words[record.updated_at_i] } ago
-        </time>
-    )
+    return ('' + enclose_io.time_words[record.updated_at_i] + ' ago');
   }
 }, {
   title: 'Status',
@@ -106,6 +102,19 @@ class ProjectsShow extends React.Component {
             <Breadcrumb.Item>{ enclose_io.project.name }</Breadcrumb.Item>
           </Breadcrumb>
           <div style={{ padding: 24, background: '#fff', minHeight: 360 }} id="main_content">
+            <h2 style={{ margin: '0 0 8px 8px' }}>{ enclose_io.project.name }</h2>
+            <div id="project_show_header">
+              <Tabs defaultActiveKey="1">
+                <TabPane
+                  tab={
+                    <div style={{paddingLeft: 8}}>
+                      <Icon type="github" />Source: <a href={ enclose_io.project.url }>{ enclose_io.project.url }</a>
+                    </div>
+                  }
+                  key="1"
+                />
+              </Tabs>
+            </div>
             <Table
               columns={columns}
               dataSource={ enclose_io.executables }

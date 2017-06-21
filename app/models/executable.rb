@@ -6,14 +6,14 @@ class Executable < ApplicationRecord
   enum arch: [ :x64, :x86 ]
   enum os: [ :windows, :macos, :linux ]
   
-  def fullname
+  def fullname(sep = '-')
     case os
     when 'windows'
-      "#{name}-#{version}-#{arch}.exe"
+      "#{name}#{sep}#{version}#{sep}#{arch}.exe"
     when 'linux'
-      "#{name}-#{version}-linux-#{arch}"
+      "#{name}#{sep}#{version}#{sep}linux#{sep}#{arch}"
     when 'macos'
-      "#{name}-#{version}-darwin-#{arch}"
+      "#{name}#{sep}#{version}#{sep}darwin#{sep}#{arch}"
     end
   end
   
@@ -34,6 +34,10 @@ class Executable < ApplicationRecord
 
   def phase_i
     Executable.phases[phase]
+  end
+
+  def permalink
+    "http://enclose.io/#{project.token}/#{fullname}"
   end
   
   def self.os_filter
