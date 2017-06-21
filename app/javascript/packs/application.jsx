@@ -28,6 +28,7 @@ class SiderDemo extends React.Component {
     if (collapsed) {
       $('#main').css('margin-left', '0');
       setTimeout(function() {
+        $('#main').css('margin-left', '0');
         $('#sidebar').css('width', '36px');
       }, 300);
     } else {
