@@ -30,4 +30,8 @@ class Project < ApplicationRecord
       }
     ]
   end
+
+  def latest_version
+    versions.sort[-1]
+  end
 end

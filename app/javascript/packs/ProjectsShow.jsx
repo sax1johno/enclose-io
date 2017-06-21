@@ -9,8 +9,7 @@ const TabPane = Tabs.TabPane;
 const menu = (
   <Menu>
     <Menu.Item key="1">Details</Menu.Item>
-    <Menu.Item key="2">Retry</Menu.Item>
-    <Menu.Item key="3">Cancel</Menu.Item>
+    <Menu.Item key="2">Permalink</Menu.Item>
   </Menu>
 );
 
@@ -21,7 +20,17 @@ const columns = [{
   render: (record) => {
     if (record.url) {
       return (
-        <a href={record.url}>{record.fullname}</a>
+        <a href={record.url}>
+          <Icon type={
+            ('windows' == record.os) ? ( "windows-o" ) : (
+              ('macos' == record.os) ? ( "apple-o" ) : (
+                ('linux' == record.os) ? ( "code-o" ) : (
+                  'question-circle-o'
+                )
+              )
+            )
+          } /> {record.fullname}
+        </a>
       )
     } else {
       return (
@@ -113,6 +122,28 @@ class ProjectsShow extends React.Component {
                   }
                   key="1"
                 />
+                <TabPane
+                  tab={
+                    <div>
+                      <Icon type="info-circle" />Language: {
+                        ('ruby' == enclose_io.project.language) ? ( "Ruby" ) : (
+                          ('nodejs' == enclose_io.project.language) ? ( "Node.js" ) : (
+                            '?'
+                          )
+                        )
+                      }
+                    </div>
+                  }
+                  key="2"
+                />
+                <TabPane
+                  tab={
+                    <div>
+                      <Icon type="tag" />Latest Version: { enclose_io.project.latest_version }
+                    </div>
+                  }
+                  key="3"
+                />
               </Tabs>
             </div>
             <Table
@@ -122,7 +153,7 @@ class ProjectsShow extends React.Component {
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>
-          Permalink<br />
+          <Icon type="link" /> Permalink<br />
           <a href={ enclose_io.project.permalink }>
             { enclose_io.project.permalink }
           </a>
