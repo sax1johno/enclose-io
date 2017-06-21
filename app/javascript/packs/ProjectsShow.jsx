@@ -58,47 +58,6 @@ const columns = [{
   render: (text, record) => {
     return ('' + enclose_io.time_words[record.updated_at_i] + ' ago');
   }
-}, {
-  title: 'Status',
-  key: 'phase',
-  sorter: (a, b) => a.phase_i - b.phase_i,
-  render: (text, record) => {
-    return (
-      <Dropdown overlay={menu} trigger={ ['click'] }>
-        <Button
-          style={{ marginLeft: 8 }}
-          type={
-            ('done' == record.phase) ? ( '' ) : (
-              ('failed' == record.phase) ? ( 'danger' ) : (
-                ('cancelled' == record.phase) ? ( 'dashed' ) : (
-                  'primary'
-                )
-              )
-            )
-          }
-        >
-          <Icon
-            type={
-                   ('pending' == record.phase) ? ('clock-circle-o') : (
-                     ('running' == record.phase) ? ('loading') : (
-                       ('uploading' == record.phase) ? ('loading-3-quarters') : (
-                         ('done' == record.phase) ? ('check-circle-o') : (
-                           ('failed' == record.phase) ? ('exclamation-circle-o') : (
-                             ('cancelled' == record.phase) ? ('minus-circle-o') : (
-                               'question-circle-o'
-                             )
-                           )
-                         )
-                       )
-                     )
-                   )
-                 }
-          />&nbsp;
-          <Icon type="down" />
-        </Button>
-      </Dropdown>
-    )
-  }
 }];
 
 class ProjectsShow extends React.Component {
