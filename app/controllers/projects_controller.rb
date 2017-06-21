@@ -9,6 +9,7 @@ class ProjectsController < ApplicationController
 
   def token_show
     @project = Project.find_by(token: params[:token])
+    @executables = @project.executables.order('id DESC')
     @title = "#{@project.name} - Enclose.IO"
     render 'show'
   end

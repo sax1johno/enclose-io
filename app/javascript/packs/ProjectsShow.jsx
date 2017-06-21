@@ -1,9 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Table, Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Table, Layout, Menu, Breadcrumb, Icon, Button, Dropdown } from 'antd';
 import { LocaleProvider } from 'antd';
 const { Header, Content, Footer, Sider } = Layout;
 import enUS from 'antd/lib/locale-provider/en_US';
+
+const menu = (
+  <Menu>
+    <Menu.Item key="1">Details</Menu.Item>
+    <Menu.Item key="2">Retry</Menu.Item>
+    <Menu.Item key="3">Cancel</Menu.Item>
+  </Menu>
+);
 
 const columns = [{
   title: 'Executable',
@@ -39,11 +47,51 @@ const columns = [{
   key: 'updated_at',
   sorter: (a, b) => a.updated_at_i - b.updated_at_i,
   render: (text, record) => {
-    setTimeout(()=>{$("time.timeago").timeago();}, 0);
     return (
-        <time className="timeago" dateTime={ record.updated_at }>
-          { record.updated_at }
+        <time dateTime={ record.updated_at }>
+          { enclose_io.time_words[record.updated_at_i] } ago
         </time>
+    )
+  }
+}, {
+  title: 'Status',
+  key: 'phase',
+  sorter: (a, b) => a.phase_i - b.phase_i,
+  render: (text, record) => {
+    return (
+      <Dropdown overlay={menu} trigger={ ['click'] }>
+        <Button
+          style={{ marginLeft: 8 }}
+          type={
+            ('done' == record.phase) ? ( '' ) : (
+              ('failed' == record.phase) ? ( 'danger' ) : (
+                ('cancelled' == record.phase) ? ( 'dashed' ) : (
+                  'primary'
+                )
+              )
+            )
+          }
+        >
+          <Icon
+            type={
+                   ('pending' == record.phase) ? ('clock-circle-o') : (
+                     ('running' == record.phase) ? ('loading') : (
+                       ('uploading' == record.phase) ? ('loading-3-quarters') : (
+                         ('done' == record.phase) ? ('check-circle-o') : (
+                           ('failed' == record.phase) ? ('exclamation-circle-o') : (
+                             ('cancelled' == record.phase) ? ('minus-circle-o') : (
+                               'question-circle-o'
+                             )
+                           )
+                         )
+                       )
+                     )
+                   )
+                 }
+          />&nbsp;
+          <Icon type="down" />
+        </Button>
+      </Dropdown>
     )
   }
 }];
@@ -58,7 +106,10 @@ class ProjectsShow extends React.Component {
             <Breadcrumb.Item>{ enclose_io.project.name }</Breadcrumb.Item>
           </Breadcrumb>
           <div style={{ padding: 24, background: '#fff', minHeight: 360 }} id="main_content">
-            <Table columns={columns} dataSource={ enclose_io.project.executables } />
+            <Table
+              columns={columns}
+              dataSource={ enclose_io.executables }
+            />
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>

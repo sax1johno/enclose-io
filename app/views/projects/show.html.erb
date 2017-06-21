@@ -2,12 +2,20 @@
 <script type="text/javascript">
   window.enclose_io.defaultSelectedKeys = [<%= raw @project.id.to_s.to_json %>];
   window.enclose_io.defaultOpenKeys = [];
-  window.enclose_io.project = <%= raw @project.to_json(methods: [:permalink, :versions_filter], include: {
-    executables: {
-      only: [:id, :url, :updated_at],
-      methods: [:fullname, :updated_at_i, :version, :os, :arch]
-    }
+  window.enclose_io.executables = <%= raw @executables.to_json({
+    only: [:id, :url, :phase, :updated_at],
+    methods: [:fullname, :updated_at_i, :phase_i, :version, :os, :arch, :key]
   }) %>;
+  window.enclose_io.project = <%= raw @project.to_json({
+    methods: [:permalink, :versions_filter]
+  }) %>;
+  <%
+    h = {}
+    @executables.map(&:updated_at).uniq.sort.each do |x|
+      h[x.to_i] = time_ago_in_words(x)
+    end
+  %>
+  window.enclose_io.time_words = <%= raw h.to_json %>;
 </script>
 <% end %>
 
