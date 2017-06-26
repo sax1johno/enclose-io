@@ -68,11 +68,15 @@ class Content extends React.Component {
           </h2>
         	<div>
         		<a target="_blank" rel="noopener noreferrer" href="https://github.com/pmq20/libsquash"><span>Libsquash</span></a>
-            <span> - </span><span>Portable, user-land SquashFS that can be easily linked and embedded</span>
+            <span> - </span><span>Portable, user-land SquashFS</span>
+        	</div>
+        	<div>
+        		<a target="_blank" rel="noopener noreferrer" href="https://github.com/pmq20/libautoupdate"><span>Libautoupdate</span></a>
+            <span> - </span><span>Auto-update library</span>
         	</div>
         	<div>
         		<a href="http://squashfs.sourceforge.net/"><span>SquashFS</span></a>
-            <span> - </span><span>A compressed read-only filesystem for Linux</span>
+            <span> - </span><span>Compressed read-only FS</span>
         	</div>
       	</li>
       	<li>
