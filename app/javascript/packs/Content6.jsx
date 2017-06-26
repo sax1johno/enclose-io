@@ -83,7 +83,7 @@ Build personal or enterprise softwares and make money out of it. Clearly mark th
         text: `<h3>Cleaner Environment</h3>
 Installing a tool never pollutes a developer's global <code>node_modules</code> or system gems any more.
 <h3>Stay Cutting-edge</h3>
-By using enclosed executables with AutoUpdate, the developer can keep using the latest tools.
+By using enclosed executables with auto-update, the developer can keep using the latest tools.
 <h3>More Productive</h3>
 Pre-compiling source code to byte code boosts the start-up speed of the developer tools.`,
       },
