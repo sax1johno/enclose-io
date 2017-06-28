@@ -18,10 +18,7 @@ const columns = [{
   key: 'fullname',
   sorter: (a, b) => a.fullname.localeCompare(b.fullname),
   render: (record) => {
-    if (record.url) {
-      return (
-        <a href={record.url}>
-          <Icon type={
+    let icon = <Icon type={
             ('windows' == record.os) ? ( "windows-o" ) : (
               ('darwin' == record.os) ? ( "apple-o" ) : (
                 ('linux' == record.os) ? ( "code-o" ) : (
@@ -29,12 +26,18 @@ const columns = [{
                 )
               )
             )
-          } /> {record.fullname}
+          } />;
+    if (record.url) {
+      return (
+        <a href={record.url}>
+          {icon} {record.fullname}
         </a>
       )
     } else {
       return (
-        record.fullname
+        <span>
+          {icon} {record.fullname}
+        </span>
       )
     }
   },
