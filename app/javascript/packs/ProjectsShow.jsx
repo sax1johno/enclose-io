@@ -23,7 +23,7 @@ const columns = [{
         <a href={record.url}>
           <Icon type={
             ('windows' == record.os) ? ( "windows-o" ) : (
-              ('macos' == record.os) ? ( "apple-o" ) : (
+              ('darwin' == record.os) ? ( "apple-o" ) : (
                 ('linux' == record.os) ? ( "code-o" ) : (
                   'question-circle-o'
                 )

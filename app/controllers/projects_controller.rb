@@ -12,11 +12,21 @@ class ProjectsController < ApplicationController
     @project = Project.find_by!(token: tokens[0])
     if tokens[1]
       identifiers = tokens[1].split('-')
-      @executable = @project.executables.find_by!(
-        name: identifiers[0],
-        arch: identifiers[1],
-        version: @project.latest_version
-      )
+      if 'exe' == params[:format]
+        @executable = @project.executables.find_by!(
+          name: identifiers[0],
+          os: 'windows',
+          arch: identifiers[1],
+          version: @project.latest_version
+        )
+      else
+        @executable = @project.executables.find_by!(
+          name: identifiers[0],
+          os: identifiers[1],
+          arch: identifiers[2],
+          version: @project.latest_version
+        )
+      end
       redirect_to @executable.url
     else
       @executables = @project.executables.order('id DESC')

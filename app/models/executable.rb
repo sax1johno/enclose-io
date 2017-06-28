@@ -4,7 +4,7 @@ class Executable < ApplicationRecord
 
   enum phase: [ :pending, :running, :uploading, :done, :failed, :cancelled ]
   enum arch: [ :x64, :x86 ]
-  enum os: [ :windows, :macos, :linux ]
+  enum os: [ :windows, :darwin, :linux ]
   
   def fullname(sep = '-')
     case os
@@ -12,7 +12,7 @@ class Executable < ApplicationRecord
       "#{name}#{sep}#{version}#{sep}#{arch}.exe"
     when 'linux'
       "#{name}#{sep}#{version}#{sep}linux#{sep}#{arch}"
-    when 'macos'
+    when 'darwin'
       "#{name}#{sep}#{version}#{sep}darwin#{sep}#{arch}"
     end
   end
