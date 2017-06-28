@@ -9,11 +9,11 @@ class Executable < ApplicationRecord
   def fullname(sep = '-')
     case os
     when 'windows'
-      "#{name}#{sep}#{version}#{sep}#{arch}.exe"
+      "#{name}#{sep}#{version}#{sep}#{arch}.zip"
     when 'linux'
-      "#{name}#{sep}#{version}#{sep}linux#{sep}#{arch}"
+      "#{name}#{sep}#{version}#{sep}linux#{sep}#{arch}.gz"
     when 'darwin'
-      "#{name}#{sep}#{version}#{sep}darwin#{sep}#{arch}"
+      "#{name}#{sep}#{version}#{sep}darwin#{sep}#{arch}.gz"
     end
   end
   
