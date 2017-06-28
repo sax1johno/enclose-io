@@ -8,10 +8,21 @@ class ProjectsController < ApplicationController
   end
 
   def token_show
-    @project = Project.find_by!(token: params[:token])
-    @executables = @project.executables.order('id DESC')
-    @title = "#{@project.name} - Enclose.IO"
-    render 'show'
+    tokens = params[:token].to_s.split('/')
+    @project = Project.find_by!(token: tokens[0])
+    if tokens[1]
+      identifiers = tokens[1].split('-')
+      @executable = @project.executables.find_by!(
+        name: identifiers[0],
+        arch: identifiers[1],
+        version: @project.latest_version
+      )
+      redirect_to @executable.url
+    else
+      @executables = @project.executables.order('id DESC')
+      @title = "#{@project.name} - Enclose.IO"
+      render 'show'
+    end
   end
 
   # GET /projects/1
