@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
     @project = Project.find_by!(token: tokens[0])
     if tokens[1]
       identifiers = tokens[1].split('-')
-      if 'exe' == params[:format]
+      if 'zip' == params[:format]
         @executable = @project.executables.find_by!(
           name: identifiers[0],
           os: 'windows',
