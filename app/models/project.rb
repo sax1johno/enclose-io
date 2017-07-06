@@ -31,7 +31,24 @@ class Project < ApplicationRecord
     ]
   end
 
+  def version_complete?(version)
+    Executable.arches.keys.each do |arch|
+      Executable.os.keys.each do |os|
+        return false unless executables.find_by(
+            version: version,
+            arch: arch,
+            os: os,
+            phase: :done
+          )
+      end
+    end
+    true
+  end
+
   def latest_version
-    versions.sort[-1]
+    versions.sort.reverse.each do |x|
+      return x if version_complete?(x)
+    end
+    nil
   end
 end

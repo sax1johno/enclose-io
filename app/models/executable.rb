@@ -3,7 +3,10 @@ class Executable < ApplicationRecord
   belongs_to :runner, optional: true, counter_cache: true, touch: true
 
   enum phase: [ :pending, :running, :uploading, :done, :failed, :cancelled ]
-  enum arch: [ :x64, :x86 ]
+  # Be careful about the following enum
+  # the content of them determine whether a version is complete or not
+  # cf. Project#version_complete?
+  enum arch: [ :x64 ]
   enum os: [ :windows, :darwin, :linux ]
   
   def fullname(sep = '-')

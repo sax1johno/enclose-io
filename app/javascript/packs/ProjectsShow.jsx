@@ -65,6 +65,21 @@ const columns = [{
 
 class ProjectsShow extends React.Component {
   render() {
+    var latest_version;
+    if (enclose_io.project.latest_version) {
+      latest_version =
+        <TabPane
+          tab={
+            <div>
+              <Icon type="tag" />Latest: { enclose_io.project.latest_version }
+            </div>
+          }
+          key="3"
+          />;
+    } else {
+      latest_version = "";
+    }
+    
     return (
       <Layout>
         <Content style={{ margin: '0 16px' }}>
@@ -98,14 +113,7 @@ class ProjectsShow extends React.Component {
                   }
                   key="2"
                 />
-                <TabPane
-                  tab={
-                    <div>
-                      <Icon type="tag" />Latest: { enclose_io.project.latest_version }
-                    </div>
-                  }
-                  key="3"
-                />
+                { latest_version }
               </Tabs>
             </div>
             <Table
