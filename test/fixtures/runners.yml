@@ -47,22 +47,6 @@ runner_4:
     zone: *2
     time: *3
 
-runner_5:
-  id: 5
-  name: Er
-  arch: x64
-  os: windows
-  executables_count: 1
-  created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &1 2017-06-28 12:27:22.622512000 Z
-    zone: &2 !ruby/object:ActiveSupport::TimeZone
-      name: Etc/UTC
-    time: *1
-  updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &3 2017-07-18 01:28:40.301899000 Z
-    zone: *2
-    time: *3
-
 runner_3:
   id: 3
   name: Tower
@@ -92,5 +76,21 @@ runner_6:
     time: *1
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &3 2017-07-20 04:18:06.732120000 Z
+    zone: *2
+    time: *3
+
+runner_5:
+  id: 5
+  name: Er
+  arch: x64
+  os: windows
+  executables_count: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-06-28 12:27:22.622512000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-20 09:27:25.674201000 Z
     zone: *2
     time: *3

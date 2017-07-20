@@ -8,12 +8,6 @@ executable_7:
   os: windows
   phase: done
   runner_id: 3
-  path: ''
-  cmd: cd D:\node-compiler && git clean -xdf && git status && git log -n1 && ruby
-    D:\ruby-compiler\bin\rubyc --clean-tmpdir --tmpdir=D:\0706 --output=nodec-x64.exe
-    --auto-update-url=http://enclose.io/nodec/nodec-x64.zip --auto-update-base=-v1.2.0-
-    bin\nodec
-  ret: 
   url: http://p.tb.cn/rmsportal_8554_nodec-v1.2.0-x64.zip
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &1 2017-07-06 07:08:07.765747000 Z
@@ -24,7 +18,7 @@ executable_7:
     utc: &3 2017-07-06 09:16:33.525525000 Z
     zone: *2
     time: *3
-  path_mtime: 
+  log: 
 
 executable_9:
   id: 9
@@ -35,13 +29,6 @@ executable_9:
   os: linux
   phase: done
   runner_id: 1
-  path: ''
-  cmd: cd /home/minqi.pmq/enclose/node-compiler && git clean -xdf && git status &&
-    git log -n1 && /home/minqi.pmq/enclose/ruby-compiler/bin/rubyc --clean-tmpdir
-    --tmpdir=/home/minqi.pmq/0706 --output=/home/minqi.pmq/Desktop/nodec-linux-x64
-    --auto-update-url=http://enclose.io/nodec/nodec-linux-x64.gz --auto-update-base=-v1.2.0-
-    bin/nodec
-  ret: 
   url: http://p.tb.cn/rmsportal_8554_nodec-v1.2.0-linux-x64.gz
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &1 2017-07-06 08:45:12.427057000 Z
@@ -52,7 +39,7 @@ executable_9:
     utc: &3 2017-07-06 09:48:50.004006000 Z
     zone: *2
     time: *3
-  path_mtime: 
+  log: 
 
 executable_2:
   id: 2
@@ -63,11 +50,6 @@ executable_2:
   os: darwin
   phase: done
   runner_id: 2
-  path: "/Users/admin/node-compiler/nodec-darwin-x64"
-  cmd: cd /Users/admin/node-compiler && git clean -xdf && git status && git log -n1
-    && /Users/admin/ruby-compiler/bin/rubyc --clean-tmpdir --output=nodec-darwin-x64
-    bin/nodec
-  ret: 0
   url: http://p.tb.cn/rmsportal_8554_nodec-v1.1.0-darwin-x64.gz
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &1 2017-06-15 09:16:17.720086000 Z
@@ -78,7 +60,7 @@ executable_2:
     utc: &3 2017-06-28 11:25:59.888197000 Z
     zone: *2
     time: *3
-  path_mtime: 1497519450
+  log: 
 
 executable_1:
   id: 1
@@ -89,11 +71,6 @@ executable_1:
   os: linux
   phase: done
   runner_id: 1
-  path: "/home/minqi.pmq/enclose/node-compiler/nodec-linux-x64"
-  cmd: cd /home/minqi.pmq/enclose/node-compiler && git clean -xdf && git status &&
-    git log -n1 && /home/minqi.pmq/enclose/ruby-compiler/bin/rubyc --make-args="-j4
-    V=1" --clean-tmpdir --output=nodec-linux-x64 bin/nodec
-  ret: 0
   url: http://p.tb.cn/rmsportal_8554_nodec-v1.1.0-linux-x64.gz
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &1 2017-06-15 07:52:16.361585000 Z
@@ -104,33 +81,7 @@ executable_1:
     utc: &3 2017-06-28 11:27:25.683864000 Z
     zone: *2
     time: *3
-  path_mtime: 1497516469
-
-executable_4:
-  id: 4
-  project_id: 2
-  name: cnpm
-  version: 5.0.0
-  arch: x64
-  os: windows
-  phase: running
-  runner_id: 5
-  path: ''
-  cmd: set npm_config_registry=https://registry.npm.taobao.org && nodec-v1.1.0-x64.exe
-    --vcbuild-args=x64 --npm-package=cnpm --npm-package-version=5.0.0 --output=cnpm-5.0.0-x64.exe
-    --tmpdir=C:\runner_t cnpm
-  ret: 
-  url: http://p.tb.cn/rmsportal_8554_cnpm-5.0.0-x64.zip
-  created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &1 2017-06-28 11:31:04.984264000 Z
-    zone: &2 !ruby/object:ActiveSupport::TimeZone
-      name: Etc/UTC
-    time: *1
-  updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &3 2017-06-28 15:06:50.094870000 Z
-    zone: *2
-    time: *3
-  path_mtime: 
+  log: 
 
 executable_11:
   id: 11
@@ -141,12 +92,6 @@ executable_11:
   os: darwin
   phase: done
   runner_id: 2
-  path: ''
-  cmd: cd /Users/admin/node-compiler && git clean -xdf && git status && git log -n1
-    && /Users/admin/ruby-compiler/bin/rubyc --clean-tmpdir --tmpdir=/Users/admin/0717
-    --output=/Users/admin/Desktop/nodec-v1.3.0-darwin-x64 --auto-update-url=http://enclose.io/nodec/nodec-darwin-x64.gz
-    --auto-update-base=-v1.3.0- bin/nodec && gzip /Users/admin/Desktop/nodec-v1.3.0-darwin-x64
-  ret: 
   url: http://p.tb.cn/rmsportal_8554_nodec-v1.3.0-darwin-x64.gz
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &1 2017-07-17 01:49:38.109355000 Z
@@ -157,7 +102,7 @@ executable_11:
     utc: &3 2017-07-17 05:07:52.138214000 Z
     zone: *2
     time: *3
-  path_mtime: 
+  log: 
 
 executable_6:
   id: 6
@@ -168,10 +113,6 @@ executable_6:
   os: linux
   phase: done
   runner_id: 1
-  path: ''
-  cmd: npm_config_registry=https://registry.npm.taobao.org nodec --npm-package=cnpm
-    --npm-package-version=5.0.0 --output=cnpm-5.0.0-linux-x64 --tmpdir=/runner_t cnpm
-  ret: 
   url: http://p.tb.cn/rmsportal_8554_cnpm-5.0.0-linux-x64.gz
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &1 2017-06-28 11:39:17.249613000 Z
@@ -182,7 +123,7 @@ executable_6:
     utc: &3 2017-06-28 11:59:06.702020000 Z
     zone: *2
     time: *3
-  path_mtime: 
+  log: 
 
 executable_5:
   id: 5
@@ -193,11 +134,6 @@ executable_5:
   os: darwin
   phase: done
   runner_id: 4
-  path: ''
-  cmd: npm_config_registry=https://registry.npm.taobao.org nodec --npm-package=cnpm
-    --npm-package-version=5.0.0 --output=cnpm-5.0.0-darwin-x64 --tmpdir=/runner_t
-    cnpm
-  ret: 
   url: http://p.tb.cn/rmsportal_8554_cnpm-5.0.0-darwin-x64.gz
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &1 2017-06-28 11:38:05.505613000 Z
@@ -208,7 +144,7 @@ executable_5:
     utc: &3 2017-06-28 11:59:20.429176000 Z
     zone: *2
     time: *3
-  path_mtime: 
+  log: 
 
 executable_3:
   id: 3
@@ -219,11 +155,6 @@ executable_3:
   os: windows
   phase: done
   runner_id: 3
-  path: D:\node-compiler\nodec-x64.exe
-  cmd: cd D:\node-compiler && git clean -xdf && git status && git log -n1 && ruby
-    D:\ruby-compiler\bin\rubyc --clean-tmpdir --tmpdir=D:\0620 --output=nodec-x64.exe
-    bin\nodec
-  ret: 0
   url: http://p.tb.cn/rmsportal_8554_nodec-v1.1.0-x64.zip
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &1 2017-06-16 04:13:56.632621000 Z
@@ -234,7 +165,7 @@ executable_3:
     utc: &3 2017-06-28 12:18:50.937236000 Z
     zone: *2
     time: *3
-  path_mtime: 
+  log: 
 
 executable_12:
   id: 12
@@ -245,12 +176,6 @@ executable_12:
   os: linux
   phase: done
   runner_id: 1
-  path: ''
-  cmd: cd /home/minqi.pmq/enclose/node-compiler && git clean -xdf && git status &&
-    git log -n1 && /home/minqi.pmq/enclose/ruby-compiler/bin/rubyc --tmpdir=/home/minqi.pmq/0717
-    --output=/home/minqi.pmq/Desktop/nodec-v1.3.0-linux-x64 --auto-update-url=http://enclose.io/nodec/nodec-linux-x64.gz
-    --auto-update-base=-v1.3.0- bin/nodec && gzip /home/minqi.pmq/Desktop/nodec-v1.3.0-linux-x64
-  ret: 
   url: http://p.tb.cn/rmsportal_8554_nodec-v1.3.0-linux-x64.gz
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &1 2017-07-17 01:49:52.100161000 Z
@@ -261,7 +186,7 @@ executable_12:
     utc: &3 2017-07-17 05:06:20.818771000 Z
     zone: *2
     time: *3
-  path_mtime: 
+  log: 
 
 executable_14:
   id: 14
@@ -272,12 +197,6 @@ executable_14:
   os: darwin
   phase: done
   runner_id: 2
-  path: ''
-  cmd: cd /Users/admin/ruby-compiler && git clean -xdf && git status && git log -n1
-    && /Users/admin/ruby-compiler/bin/rubyc --clean-tmpdir --tmpdir=/Users/admin/0718
-    --output=/Users/admin/Desktop/rubyc-v0.2.0-darwin-x64 --auto-update-url=http://enclose.io/rubyc/rubyc-darwin-x64.gz
-    --auto-update-base=-v0.2.0- bin/rubyc && gzip /Users/admin/Desktop/rubyc-v0.2.0-darwin-x64
-  ret: 
   url: http://p.tb.cn/rmsportal_8554_rubyc-v0.2.0-darwin-x64.gz
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &1 2017-07-17 15:13:33.750663000 Z
@@ -288,7 +207,7 @@ executable_14:
     utc: &3 2017-07-17 15:33:52.694679000 Z
     zone: *2
     time: *3
-  path_mtime: 
+  log: 
 
 executable_8:
   id: 8
@@ -299,12 +218,6 @@ executable_8:
   os: darwin
   phase: done
   runner_id: 2
-  path: ''
-  cmd: cd /Users/admin/node-compiler && git clean -xdf && git status && git log -n1
-    && /Users/admin/ruby-compiler/bin/rubyc --clean-tmpdir --tmpdir=/Users/admin/0706
-    --output=/Users/admin/Desktop/nodec-darwin-x64 --auto-update-url=http://enclose.io/nodec/nodec-darwin-x64.gz
-    --auto-update-base=-v1.2.0- bin/nodec
-  ret: 
   url: http://p.tb.cn/rmsportal_8554_nodec-v1.2.0-darwin-x64.gz
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &1 2017-07-06 08:25:19.866549000 Z
@@ -315,7 +228,7 @@ executable_8:
     utc: &3 2017-07-06 08:56:40.424390000 Z
     zone: *2
     time: *3
-  path_mtime: 
+  log: 
 
 executable_10:
   id: 10
@@ -326,11 +239,6 @@ executable_10:
   os: windows
   phase: done
   runner_id: 3
-  path: ''
-  cmd: cd D:\node-compiler && git clean -xdf && git status && git log -n1 && ruby
-    D:\ruby-compiler\bin\rubyc --tmpdir=D:\0717 --output=nodec-v1.3.0-x64.exe --auto-update-url=http://enclose.io/nodec/nodec-x64.zip
-    --auto-update-base=-v1.3.0- bin\nodec
-  ret: 
   url: http://p.tb.cn/rmsportal_8554_nodec-v1.3.0-x64.zip
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &1 2017-07-17 01:49:24.142376000 Z
@@ -341,7 +249,7 @@ executable_10:
     utc: &3 2017-07-17 05:08:42.756560000 Z
     zone: *2
     time: *3
-  path_mtime: 
+  log: 
 
 executable_13:
   id: 13
@@ -352,12 +260,6 @@ executable_13:
   os: linux
   phase: done
   runner_id: 1
-  path: ''
-  cmd: cd /home/minqi.pmq/enclose/ruby-compiler && git clean -xdf && git status &&
-    git log -n1 && /home/minqi.pmq/enclose/ruby-compiler/bin/rubyc --tmpdir=/home/minqi.pmq/0718
-    --output=/home/minqi.pmq/Desktop/rubyc-v0.2.0-linux-x64 --auto-update-url=http://enclose.io/rubyc/rubyc-linux-x64.gz
-    --auto-update-base=-v0.2.0- bin/rubyc && gzip /home/minqi.pmq/Desktop/rubyc-v0.2.0-linux-x64
-  ret: 
   url: http://p.tb.cn/rmsportal_8554_rubyc-v0.2.0-linux-x64.gz
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &1 2017-07-17 15:08:49.595726000 Z
@@ -368,7 +270,28 @@ executable_13:
     utc: &3 2017-07-17 15:38:15.107380000 Z
     zone: *2
     time: *3
-  path_mtime: 
+  log: 
+
+executable_4:
+  id: 4
+  project_id: 2
+  name: cnpm
+  version: 5.0.0
+  arch: x64
+  os: windows
+  phase: done
+  runner_id: 5
+  url: http://p.tb.cn/rmsportal_8554_cnpm-5.0.0-x64.zip
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-06-28 11:31:04.984264000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-20 09:27:25.663061000 Z
+    zone: *2
+    time: *3
+  log: ''
 
 executable_15:
   id: 15
@@ -379,11 +302,6 @@ executable_15:
   os: windows
   phase: done
   runner_id: 3
-  path: ''
-  cmd: cd D:\ruby-compiler && git clean -xdf && git status && git log -n1 && ruby
-    D:\ruby-compiler\bin\rubyc --tmpdir=D:\0718 --output=rubyc-v0.2.0-x64.exe --auto-update-url=http://enclose.io/rubyc/rubyc-x64.zip
-    --auto-update-base=-v0.2.0- bin\rubyc
-  ret: 
   url: http://p.tb.cn/rmsportal_8554_rubyc-v0.2.0-x64.zip
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &1 2017-07-17 15:44:45.670479000 Z
@@ -394,4 +312,256 @@ executable_15:
     utc: &3 2017-07-18 02:18:14.305185000 Z
     zone: *2
     time: *3
-  path_mtime: 
+  log: 
+
+executable_16:
+  id: 16
+  project_id: 5
+  name: ruby
+  version: 2.4.1
+  arch: x64
+  os: windows
+  phase: pending
+  runner_id: 
+  url: ''
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-07-20 06:20:50.551294000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-20 06:20:50.551294000 Z
+    zone: *2
+    time: *3
+  log: 
+
+executable_17:
+  id: 17
+  project_id: 5
+  name: ruby
+  version: 2.4.1
+  arch: x64
+  os: darwin
+  phase: pending
+  runner_id: 
+  url: ''
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-07-20 06:21:11.311523000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-20 06:21:11.311523000 Z
+    zone: *2
+    time: *3
+  log: 
+
+executable_18:
+  id: 18
+  project_id: 5
+  name: ruby
+  version: 2.4.1
+  arch: x64
+  os: linux
+  phase: pending
+  runner_id: 
+  url: ''
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-07-20 06:21:24.512299000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-20 06:21:24.512299000 Z
+    zone: *2
+    time: *3
+  log: 
+
+executable_19:
+  id: 19
+  project_id: 4
+  name: node
+  version: v8.2.0
+  arch: x64
+  os: windows
+  phase: pending
+  runner_id: 
+  url: ''
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-07-20 06:22:14.708089000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-20 06:22:14.708089000 Z
+    zone: *2
+    time: *3
+  log: 
+
+executable_20:
+  id: 20
+  project_id: 4
+  name: node
+  version: v8.2.0
+  arch: x64
+  os: darwin
+  phase: pending
+  runner_id: 
+  url: ''
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-07-20 06:22:32.320956000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-20 06:22:32.320956000 Z
+    zone: *2
+    time: *3
+  log: 
+
+executable_21:
+  id: 21
+  project_id: 4
+  name: node
+  version: v8.2.0
+  arch: x64
+  os: linux
+  phase: pending
+  runner_id: 
+  url: ''
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-07-20 06:23:19.419057000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-20 06:23:19.419057000 Z
+    zone: *2
+    time: *3
+  log: 
+
+executable_22:
+  id: 22
+  project_id: 3
+  name: rubyc
+  version: v0.3.0
+  arch: x64
+  os: windows
+  phase: pending
+  runner_id: 
+  url: ''
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-07-20 09:34:57.740879000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-20 09:34:57.740879000 Z
+    zone: *2
+    time: *3
+  log: ''
+
+executable_23:
+  id: 23
+  project_id: 3
+  name: rubyc
+  version: v0.3.0
+  arch: x64
+  os: darwin
+  phase: pending
+  runner_id: 
+  url: ''
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-07-20 09:35:30.542113000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-20 09:35:30.542113000 Z
+    zone: *2
+    time: *3
+  log: ''
+
+executable_24:
+  id: 24
+  project_id: 3
+  name: rubyc
+  version: v0.3.0
+  arch: x64
+  os: linux
+  phase: pending
+  runner_id: 
+  url: ''
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-07-20 09:35:50.484730000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-20 09:35:50.484730000 Z
+    zone: *2
+    time: *3
+  log: ''
+
+executable_25:
+  id: 25
+  project_id: 1
+  name: nodec
+  version: v1.4.0
+  arch: x64
+  os: windows
+  phase: pending
+  runner_id: 
+  url: ''
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-07-20 09:36:39.876771000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-20 09:36:39.876771000 Z
+    zone: *2
+    time: *3
+  log: ''
+
+executable_26:
+  id: 26
+  project_id: 1
+  name: nodec
+  version: v1.4.0
+  arch: x64
+  os: darwin
+  phase: pending
+  runner_id: 
+  url: ''
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-07-20 09:37:17.990390000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-20 09:37:17.990390000 Z
+    zone: *2
+    time: *3
+  log: ''
+
+executable_27:
+  id: 27
+  project_id: 1
+  name: nodec
+  version: v1.4.0
+  arch: x64
+  os: linux
+  phase: pending
+  runner_id: 
+  url: ''
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-07-20 09:37:44.651450000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-20 09:37:44.651450000 Z
+    zone: *2
+    time: *3
+  log: ''
