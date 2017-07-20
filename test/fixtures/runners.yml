@@ -78,3 +78,19 @@ runner_3:
     utc: &3 2017-07-18 02:18:14.310203000 Z
     zone: *2
     time: *3
+
+runner_6:
+  id: 6
+  name: Siri
+  arch: x64
+  os: mac
+  executables_count: 0
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-07-20 04:18:06.732120000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-20 04:18:06.732120000 Z
+    zone: *2
+    time: *3
