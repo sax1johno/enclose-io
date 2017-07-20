@@ -57,6 +57,7 @@ class SiderDemo extends React.Component {
               title={<span><Icon type="appstore" /><span className="nav-text">Enclose.IO</span></span>}
             >
               <Menu.Item key="-1"><a href="/">Home</a></Menu.Item>
+              <Menu.Item key="-2"><a href="https://github.com/pmq20/enclose-io/issues/new">Add a Project</a></Menu.Item>
             </SubMenu>
             {
               window.enclose_io.projects.map((x) => {
