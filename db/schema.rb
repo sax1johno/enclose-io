@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170720030644) do
+ActiveRecord::Schema.define(version: 20170720032819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,13 +32,6 @@ ActiveRecord::Schema.define(version: 20170720030644) do
     t.integer "path_mtime"
   end
 
-  create_table "logs", force: :cascade do |t|
-    t.integer "executable_id"
-    t.text "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "projects", force: :cascade do |t|
     t.string "name", null: false
     t.integer "language", null: false
@@ -48,6 +41,8 @@ ActiveRecord::Schema.define(version: 20170720030644) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "token", null: false
+    t.index ["name"], name: "index_projects_on_name", unique: true
+    t.index ["token"], name: "index_projects_on_token", unique: true
   end
 
   create_table "runners", force: :cascade do |t|
@@ -57,6 +52,7 @@ ActiveRecord::Schema.define(version: 20170720030644) do
     t.integer "executables_count", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_runners_on_name", unique: true
   end
 
 end

@@ -1,4 +1,10 @@
 class Project < ApplicationRecord
+  validates :name, presence: true, uniqueness: true
+  validates :language, presence: true
+  validates :source, presence: true
+  validates :url, presence: true
+  validates :token, presence: true, uniqueness: true
+
   has_many :executables, dependent: :destroy
 
   enum language: [ :ruby, :nodejs ]

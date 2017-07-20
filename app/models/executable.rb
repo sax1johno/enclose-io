@@ -1,4 +1,11 @@
 class Executable < ApplicationRecord
+  validates :project_id, presence: true
+  validates :name, presence: true
+  validates :version, presence: true
+  validates :arch, presence: true
+  validates :os, presence: true
+  validates :phase, presence: true
+
   belongs_to :project, counter_cache: true, touch: true
   belongs_to :runner, optional: true, counter_cache: true, touch: true
 
