@@ -10,7 +10,7 @@ http://enclose.io
 
 Enclose.IO is offered as a service. The ultimate goal is that users can register their projects into Enclose.IO, and Enclose.IO will produce stand-alone executables automatically with auto-update enabled.
 
-Then in runtime, the executables communicate with the Enclose.IO server to keep itself up to date.
+After an executable has been distributed, it communicates with the Enclose.IO server to keep itself up to date. When a new version is detected, it downloads the new version from Enclose.IO and replaces itself with it.
 
 See http://enclose.io/nodec for a working example.
 
