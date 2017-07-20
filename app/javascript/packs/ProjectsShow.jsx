@@ -62,7 +62,7 @@ const columns = [{
     let menu = (
       <Menu>
         {
-          (record.log) ? <Menu.Item key="1"><a href={record.log}>Logs</a></Menu.Item> : <Menu.Item key="1" disabled>Details ({record.phase})</Menu.Item>
+          (record.log) ? <Menu.Item key="1"><a href={record.log}>Logs</a></Menu.Item> : <Menu.Item key="1" disabled>Logs ({record.phase})</Menu.Item>
         }
         <Menu.Item key="1" disabled={ !record.log }>Details</Menu.Item>
         <Menu.Item key="2" disabled>Retry</Menu.Item>

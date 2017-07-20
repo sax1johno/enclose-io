@@ -86,13 +86,7 @@ class Content extends React.Component {
         		<a target="_blank" rel="noopener noreferrer" href="https://eggjs.org/">Egg</a><span> - </span><span>Enterprise Node.js Framework</span>
         	</div>
         	<div>
-        		<a target="_blank" rel="noopener noreferrer" href="https://alinode.aliyun.com/">Alinode</a><span> - </span><span>Node.js Performance Managing</span>
-        	</div>
-        	<div>
         		<a href="http://ant.design/">Ant Design</a><span> - </span><span>UI Design Language</span>
-        	</div>
-        	<div>
-        		<a href="https://antv.alipay.com/">AntV</a><span> - </span><span>Data Visualization</span>
         	</div>
       	</li>
       	<li>
@@ -108,9 +102,6 @@ class Content extends React.Component {
         	</div>
         	<div>
         		<a target="_blank" rel="noopener noreferrer" href="https://github.com/lexor90">Alessandro Agosto</a>
-        	</div>
-        	<div>
-        		<a target="_blank" rel="noopener noreferrer" href="http://blog.xiaoba.me/">Yuwei Ba</a>
         	</div>
       	</li>
       </ul>
