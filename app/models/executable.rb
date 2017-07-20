@@ -9,7 +9,7 @@ class Executable < ApplicationRecord
   belongs_to :project, counter_cache: true, touch: true
   belongs_to :runner, optional: true, counter_cache: true, touch: true
 
-  enum phase: [ :pending, :running, :uploading, :done, :failed, :cancelled ]
+  enum phase: [ :pending, :running, :uploading, :done, :failed, :cancelled, :timeout ]
   # Be careful about the following enum
   # the content of them determine whether a version is complete or not
   # cf. Project#version_complete?

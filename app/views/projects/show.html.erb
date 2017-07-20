@@ -6,7 +6,6 @@
     methods: [:permalink, :versions_filter, :latest_version]
   }) %>;
   window.enclose_io.executables = <%= raw @executables.to_json({
-    only: [:id, :url, :phase, :updated_at, :version, :os, :arch],
     methods: [:fullname, :updated_at_i, :phase_i, :key, :permalink]
   }) %>;
   <%

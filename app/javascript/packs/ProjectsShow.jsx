@@ -6,13 +6,6 @@ import enUS from 'antd/lib/locale-provider/en_US';
 const { Header, Content, Footer, Sider } = Layout;
 const TabPane = Tabs.TabPane;
 
-const menu = (
-  <Menu>
-    <Menu.Item key="1">Details</Menu.Item>
-    <Menu.Item key="2">Permalink</Menu.Item>
-  </Menu>
-);
-
 const columns = [{
   title: 'Executable',
   key: 'fullname',
@@ -61,6 +54,57 @@ const columns = [{
   render: (text, record) => {
     return ('' + enclose_io.time_words[record.updated_at_i] + ' ago');
   }
+}, {
+  title: 'Status',
+  key: 'phase',
+  sorter: (a, b) => a.phase_i - b.phase_i,
+  render: (text, record) => {
+    let menu = (
+      <Menu>
+        {
+          (record.log) ? <Menu.Item key="1"><a href={record.log}>Logs</a></Menu.Item> : <Menu.Item key="1" disabled>Logs</Menu.Item>
+        }
+        <Menu.Item key="1" disabled={ !record.log }>Details</Menu.Item>
+        <Menu.Item key="2" disabled>Retry</Menu.Item>
+        <Menu.Item key="3" disabled>Cancel</Menu.Item>
+      </Menu>
+    );
+    return (
+      <Dropdown overlay={menu} trigger={ ['click'] }>
+        <Button
+          style={{ marginLeft: 8 }}
+          type={
+            ('done' == record.phase) ? ( '' ) : (
+              ('failed' == record.phase) ? ( 'danger' ) : (
+                ('cancelled' == record.phase) ? ( '' ) : (
+                  'primary'
+                )
+              )
+            )
+          }
+        >
+          <Icon
+            type={
+                   ('pending' == record.phase) ? ('clock-circle-o') : (
+                     ('running' == record.phase) ? ('loading') : (
+                       ('uploading' == record.phase) ? ('loading-3-quarters') : (
+                         ('done' == record.phase) ? ('check-circle-o') : (
+                           ('failed' == record.phase) ? ('exclamation-circle-o') : (
+                             ('cancelled' == record.phase) ? ('minus-circle-o') : (
+                               'question-circle-o'
+                             )
+                           )
+                         )
+                       )
+                     )
+                   )
+                 }
+           />&nbsp;
+          <Icon type="down" />
+        </Button>
+      </Dropdown>
+    )
+  }
 }];
 
 class ProjectsShow extends React.Component {
@@ -105,7 +149,11 @@ class ProjectsShow extends React.Component {
                       <Icon type="info-circle" />Language: {
                         ('ruby' == enclose_io.project.language) ? ( "Ruby" ) : (
                           ('nodejs' == enclose_io.project.language) ? ( "Node.js" ) : (
-                            '?'
+                            ('cc' == enclose_io.project.language) ? ( "C++" ) : (
+                              ('c' == enclose_io.project.language) ? ( "C" ) : (
+                                '?'
+                              )
+                            )
                           )
                         )
                       }

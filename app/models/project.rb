@@ -7,7 +7,7 @@ class Project < ApplicationRecord
 
   has_many :executables, dependent: :destroy
 
-  enum language: [ :ruby, :nodejs ]
+  enum language: [ :ruby, :nodejs, :c, :cc ]
   enum source: [ :npm, :rubygems, :github ]
 
   def permalink
