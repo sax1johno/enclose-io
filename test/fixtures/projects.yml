@@ -1,11 +1,54 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-# This model initially had no columns defined. If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-# column: value
+project_1:
+  id: 1
+  name: Node.js Compiler
+  language: ruby
+  source: github
+  url: https://github.com/pmq20/node-compiler
+  executables_count: 9
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-06-15 07:50:06.095642000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-17 05:08:42.759616000 Z
+    zone: *2
+    time: *3
+  token: nodec
+
+project_3:
+  id: 3
+  name: Ruby Compiler
+  language: ruby
+  source: github
+  url: https://github.com/pmq20/ruby-compiler
+  executables_count: 3
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-07-17 15:06:03.689301000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-07-18 02:18:14.307845000 Z
+    zone: *2
+    time: *3
+  token: rubyc
+
+project_2:
+  id: 2
+  name: Company Npm
+  language: nodejs
+  source: npm
+  url: https://www.npmjs.com/package/cnpm
+  executables_count: 3
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2017-06-28 03:47:16.594978000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2017-06-28 15:06:50.098160000 Z
+    zone: *2
+    time: *3
+  token: cnpm
