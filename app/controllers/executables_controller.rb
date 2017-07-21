@@ -19,6 +19,7 @@ class ExecutablesController < ApplicationController
       "arch" => "#{@executable.arch}",
       "os" => "#{@executable.os}",
       "package" => "#{@executable.project.token}",
+      "project" => @executable.project.as_json,
       "version" => "#{@executable.version}",
       "filename" => "#{@executable.fullname}",
       "createdAt" => "#{@executable.created_at}",
