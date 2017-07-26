@@ -14,6 +14,20 @@ class Project < ApplicationRecord
     "http://enclose.io/#{token}"
   end
   
+  def spawn(name, version)
+    Executable.arches.each do |k1, v1|
+      Executable.os.each do |k2, v2|
+        Executable.find_or_create_by!({
+          project_id: id,
+          name: name,
+          version: version,
+          arch: k1,
+          os: k2
+        })
+      end
+    end
+  end
+  
   def versions
     executables.group(:version).pluck(:version)
   end
