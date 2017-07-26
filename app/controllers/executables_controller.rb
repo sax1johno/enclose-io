@@ -26,7 +26,6 @@ class ExecutablesController < ApplicationController
       "startedAt" => "#{@executable.updated_at}",
       "runnerId" => "#{params[:runnerId]}",
       "timeout" => 1800000,
-      "private" => false,
     }
   end
   
