@@ -16,7 +16,7 @@
       <img style="position: fixed; top: 0; right: 0; border: 0; width: 149px; height: 149px; z-index: 30000" src="<%= asset_path 'fork.png' %>" alt="Fork me on GitHub" />
     </a>
     <script type="text/javascript">
-      window.enclose_io.projects = <%= raw Project.all.to_json %>;
+      window.enclose_io.projects = <%= raw Project.order('updated_at DESC').to_json %>;
     </script>
     <%= yield :pre %>
     <div id="sidebar">
