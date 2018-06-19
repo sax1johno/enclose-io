@@ -21,7 +21,7 @@
     "file-loader": "^0.11.2",
     "glob": "^7.1.2",
     "js-yaml": "^3.8.4",
-    "less": "^2.7.2",
+    "less": "^3.0.2",
     "less-loader": "^4.0.4",
     "node-sass": "^4.5.3",
     "path-complete-extname": "^0.1.0",
@@ -42,9 +42,15 @@
     "style-loader": "^0.18.2",
     "webpack": "^2.6.1",
     "webpack-manifest-plugin": "^1.1.0",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "webpack-dev-server": "^2.4.5"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
