@@ -35,7 +35,7 @@
     "rc-scroll-anim": "^1.0.5",
     "rc-tween-one": "^1.2.5",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "react-dom": "^16.0.1",
     "react-sublime-video": "^0.2.5",
     "resolve-url-loader": "^2.0.2",
     "sass-loader": "^6.0.5",
